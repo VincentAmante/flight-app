@@ -6,7 +6,6 @@ import {
     Grid2,
     Paper,
     Container,
-    Box
 } from '@mui/material'
 
 import { Search as SearchIcon } from '@mui/icons-material'
@@ -39,8 +38,10 @@ export default function SearchForm(props: SearchFormProps) {
     const [fromDate, setFromDate] = useState(new Date().toISOString().split('T')[0])
 
     return (
-        <Paper elevation={2}>
-            <Container sx={{ p: 1 }}>
+        <Paper elevation={2} sx={{
+            borderRadius: 2
+        }}>
+            <Container sx={{ py: 2 }}>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <Grid2 container rowSpacing={2} columnSpacing={1}
                         columns={{
@@ -114,6 +115,10 @@ export default function SearchForm(props: SearchFormProps) {
                     <Grid2 size={4} sx={{ pt: 1 }} display='flex' justifyContent='center'>
                         <Button
                             onClick={handleSubmit(onSubmit)}
+                            sx={{
+                                borderRadius: 12,
+                                fontWeight: 'light'
+                            }}
                             startIcon={<SearchIcon />} size='large' variant='contained' color='primary'>
                             Search
                         </Button>
