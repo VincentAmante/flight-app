@@ -1,13 +1,11 @@
 'use client'
 
-import Image from "next/image";
 import {
     Table,
     TableBody,
     TableCell,
     TableContainer,
     TableRow,
-    TableHead,
     TablePagination,
     Typography,
     Paper,
@@ -15,11 +13,6 @@ import {
     Collapse,
     Stack,
     Divider,
-    List,
-    ListItem,
-    ListItemText,
-    Grid2,
-    Button,
     Toolbar,
     Menu,
     MenuItem,
@@ -31,7 +24,6 @@ import {
     Slider,
     Skeleton,
     Avatar,
-    Breadcrumbs
 } from "@mui/material";
 
 import {
@@ -45,16 +37,14 @@ import {
 
 import { timelineItemClasses } from '@mui/lab/TimelineItem'
 
-import { useState, useMemo } from "react";
-import { ItinerariesEntity } from "../utils/airscrapper-types";
+import { useState, useMemo, Fragment, useEffect } from "react";
+import { ItinerariesEntity, SegmentsEntity } from "../utils/airscrapper-types";
 import {
     FilterList as FilterListIcon,
     KeyboardArrowDown as KeyboardArrowDownIcon,
     KeyboardArrowUp as KeyboardArrowUpIcon,
     SwapVert as SortIcon,
 } from "@mui/icons-material";
-
-type Order = 'asc' | 'desc'
 
 function descendingComparator<T>(a: T, b: T) {
     if (b < a) {
@@ -70,9 +60,9 @@ function filterByRange(val: number, maxValue: number, minValue: number = Number.
     return val >= minValue && val <= maxValue;
 }
 
-function filterByArray(val: string, arr: string[], exclude: boolean = false) {
-    return exclude ? !arr.includes(val) : arr.includes(val);
-}
+// function filterByArray(val: string, arr: string[], exclude: boolean = false) {
+//     return exclude ? !arr.includes(val) : arr.includes(val);
+// }
 
 interface FlightFilters {
     priceFilter?: number,
@@ -83,7 +73,6 @@ interface FlightFilters {
     departureDurationFilter?: number,
     returnDurationFilter?: number,
 }
-
 function runFilters(
     flight: ItinerariesEntity,
     filters: FlightFilters
@@ -107,6 +96,7 @@ function runFilters(
 }
 
 
+type Order = 'asc' | 'desc'
 type OrderByType = 'duration' | 'price'
 
 function getComparator(
@@ -133,6 +123,71 @@ function getComparator(
     return () => 0;
 }
 
+interface SegmentTimelineProps {
+    segment: SegmentsEntity
+}
+
+function SegmentTimeline(props: SegmentTimelineProps) {
+    const { segment } = props;
+
+    return <Timeline sx={{
+        [`& .${timelineItemClasses.root}:before`]: {
+            flex: 0,
+            padding: 0,
+        },
+    }}>
+        <TimelineItem sx={{
+            minHeight: 48
+        }}>
+            <TimelineSeparator>
+                <TimelineDot />
+                <TimelineConnector />
+            </TimelineSeparator>
+            <TimelineContent>
+                <Typography variant="body2">
+                    <FormattedTime time={segment.departure} />
+                    &nbsp;-&nbsp;
+                    {segment.origin.name} ({segment.origin.flightPlaceId})
+                </Typography>
+                <Typography variant="caption">
+                    <FormattedDate date={segment.departure} />
+                </Typography>
+            </TimelineContent>
+        </TimelineItem>
+        <TimelineItem sx={{
+            minHeight: 48
+        }}>
+            <TimelineSeparator>
+                <TimelineDot />
+                <TimelineConnector />
+            </TimelineSeparator>
+            <TimelineContent>
+                <Typography variant="caption">
+                    Travel Time: &nbsp;
+                    <MinutesToHoursAndMins minutes={segment.durationInMinutes} />
+                </Typography>
+            </TimelineContent>
+        </TimelineItem>
+        <TimelineItem sx={{
+            minHeight: 48
+        }}>
+            <TimelineSeparator>
+                <TimelineDot />
+            </TimelineSeparator>
+            <TimelineContent>
+                <Typography variant="body2">
+                    <FormattedTime time={segment.arrival} />
+                    &nbsp;-&nbsp;
+                    {segment.destination.name} ({segment.destination.flightPlaceId})
+                </Typography>
+                <Typography variant="caption">
+                    <FormattedDate date={segment.arrival} />
+                </Typography>
+            </TimelineContent>
+        </TimelineItem>
+    </Timeline>
+}
+
 interface RowProps {
     itinerary: ItinerariesEntity
 }
@@ -154,10 +209,10 @@ function FlightRow(props: RowProps) {
         carriers.push(departingFlight.carriers.marketing[0])
     }
 
-    // TODO: Change this to 'Operated by'
-    else if (departingFlight.carriers.operating) {
-        carriers.push(departingFlight.carriers.operating[0])
-    }
+    // // TODO: Change this to 'Operated by'
+    // else if (departingFlight.carriers.operating) {
+    //     carriers.push(departingFlight.carriers.operating[0])
+    // }
 
     let durationInMinutes = 0
     let lastSegmentArrival = 0
@@ -166,12 +221,10 @@ function FlightRow(props: RowProps) {
     if (departingFlight.segments)
         for (const segment of departingFlight.segments) {
             if (durationInMinutes > 0) {
-                // calculate layover time
                 const currentSegmentDeparture = Date.parse(segment.departure)
                 const differenceInMilliseconds = currentSegmentDeparture - lastSegmentArrival
                 const differenceInMinutes = differenceInMilliseconds / (1000 * 60)
                 layovers.push(differenceInMinutes)
-                console.log('layover time:', differenceInMinutes, 'minutes')
             }
             durationInMinutes += segment.durationInMinutes
             lastSegmentArrival = Date.parse(segment.arrival)
@@ -276,57 +329,8 @@ function FlightRow(props: RowProps) {
                 <Collapse in={open} timeout="auto" unmountOnExit>
                     <Stack sx={{ py: 1 }}>
                         {departingFlight.segments!.map((segment, index) => (
-                            <>
-                                <Timeline sx={{
-                                    [`& .${timelineItemClasses.root}:before`]: {
-                                        flex: 0,
-                                        padding: 0,
-                                    },
-                                }}>
-                                    <TimelineItem sx={{
-                                        minHeight: 48
-                                    }}>
-                                        <TimelineSeparator>
-                                            <TimelineDot />
-                                            <TimelineConnector />
-                                        </TimelineSeparator>
-                                        <TimelineContent>
-                                            <Typography>
-                                                <FormattedTime time={segment.departure} />
-                                                - {segment.origin.name} ({segment.origin.flightPlaceId})
-
-                                            </Typography>
-                                        </TimelineContent>
-                                    </TimelineItem>
-                                    <TimelineItem sx={{
-                                        minHeight: 48
-                                    }}>
-                                        <TimelineSeparator>
-                                            <TimelineDot />
-                                            <TimelineConnector />
-                                        </TimelineSeparator>
-                                        <TimelineContent>
-                                            <Typography variant="caption">
-                                                Travel Time: &nbsp;
-                                                <MinutesToHoursAndMins minutes={segment.durationInMinutes} />
-                                            </Typography>
-                                        </TimelineContent>
-                                    </TimelineItem>
-                                    <TimelineItem sx={{
-                                        minHeight: 48
-                                    }}>
-                                        <TimelineSeparator>
-                                            <TimelineDot />
-                                        </TimelineSeparator>
-                                        <TimelineContent>
-                                            <Typography>
-                                                <FormattedTime time={segment.arrival} />
-                                                - {segment.destination.name} ({segment.destination.flightPlaceId})
-
-                                            </Typography>
-                                        </TimelineContent>
-                                    </TimelineItem>
-                                </Timeline>
+                            <Fragment key={segment.id}>
+                                <SegmentTimeline segment={segment} />
                                 {index === departingFlight.segments!.length - 1 ? null
                                     :
                                     <>
@@ -334,25 +338,43 @@ function FlightRow(props: RowProps) {
                                             <MinutesToHoursAndMins minutes={layovers[index]} />
                                             &nbsp;Layover
                                         </Divider>
-                                        {/* <List>
-                                            <ListItem sx={{ py: 0 }}>
-                                                <ListItemText primary={
-                                                    <MinutesToHoursAndMins minutes={layovers[index]} />
-                                                }
-                                                    secondary='layover'>
-                                                </ListItemText>
-                                            </ListItem>
-                                        </List>
-                                        <Divider /> */}
                                     </>
                                 }
-                            </>
+                            </Fragment>
                         ))}
                     </Stack>
                 </Collapse>
             </TableCell>
         </TableRow>
     </>
+}
+
+function SkeletonRows(props: { rows: number }) {
+    const height = 36
+    return (
+        <>
+            {Array.from({ length: props.rows }).map((_, index) => {
+                return (
+                    <TableRow key={index}>
+                        <TableCell colSpan={1}>
+                            <Skeleton variant='rectangular' animation='pulse' height={height} />
+                        </TableCell>
+                        <TableCell colSpan={1}>
+                            <Skeleton variant='text' animation='pulse' height={height} />
+                        </TableCell>
+                        <TableCell colSpan={1} sx={{
+                            display: {
+                                xs: 'none',
+                                sm: 'table-cell'
+                            }
+                        }}>
+                            <Skeleton variant='text' animation='pulse' height={height} />
+                        </TableCell>
+                    </TableRow>
+                );
+            })}
+        </>
+    )
 }
 
 function MinutesToHoursAndMins(props: { minutes: number }) {
@@ -370,25 +392,16 @@ function FormattedTime(props: { time: string }) {
     return <>{new Date(props.time).toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' })}</>
 }
 
-
-function TableToolbar(props: { children?: React.ReactNode }) {
-    const { children } = props;
-    return <Toolbar>
-        <Stack direction="row" spacing={2} justifyContent='space-between' sx={{ width: '100%' }}>
-            <Typography variant="h5" fontWeight='bold'>
-                Flights
-            </Typography>
-            <Stack direction='row' spacing={2}>
-                {children}
-            </Stack>
-        </Stack>
-    </Toolbar>
+function FormattedDate(props: { date: string }) {
+    return <>{new Date(props.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</>
 }
+
 
 interface SortMenuProps {
     setOrder: (order: Order) => void;
     setOrderBy: (orderBy: OrderByType) => void;
 }
+
 function SortMenu(props: SortMenuProps) {
     const { setOrder, setOrderBy } = props;
 
@@ -403,15 +416,6 @@ function SortMenu(props: SortMenuProps) {
 
     return (
         <div>
-            {/* <Button
-                id="sort-menu-button"
-                aria-controls={open ? 'sort-menu' : undefined}
-                aria-haspopup="true"
-                aria-expanded={open ? 'true' : undefined}
-                onClick={handleClick}
-            >
-                Sort
-            </Button> */}
             <IconButton id="sort-menu-button" aria-controls={open ? 'sort-menu' : undefined} aria-haspopup="true"
                 aria-expanded={open ? 'true' : undefined} onClick={handleClick}>
                 <SortIcon />
@@ -432,8 +436,6 @@ function SortMenu(props: SortMenuProps) {
         </div>
     );
 }
-
-
 
 interface FilterMenuProps {
     children?: React.ReactNode;
@@ -474,34 +476,29 @@ function FilterMenu(props: FilterMenuProps) {
     );
 }
 
+function TableToolbar(props: { children?: React.ReactNode }) {
+    const { children } = props;
+    return <Toolbar>
+        <Stack direction="row" spacing={2} justifyContent='space-between' sx={{ width: '100%' }}>
+            <Typography variant="h5">
+                Flights
+            </Typography>
+            <Stack direction='row' spacing={2}>
+                {children}
+            </Stack>
+        </Stack>
+    </Toolbar>
+}
+
 interface FlightsDisplayProps {
     itineraries: ItinerariesEntity[]
     isLoading: boolean;
-}
-
-function SkeletonRows(props: { rows: number }) {
-    // Make an empty array of the given length and map over it to create a list of skeletons
-    return (
-        <>
-            {Array.from({ length: props.rows }).map((_, index) => {
-                return (
-                    <TableRow key={index}>
-                        <TableCell colSpan={1}>
-                            <Skeleton variant='rectangular' height={48} />
-                        </TableCell>
-                        <TableCell colSpan={4}>
-                            <Skeleton variant='rectangular' height={48} />
-                        </TableCell>
-                    </TableRow>
-                );
-            })}
-        </>
-    )
+    hasNoFlightsFound: boolean;
 }
 
 
 export default function FlightsDisplay(props: FlightsDisplayProps) {
-    const { itineraries, isLoading } = props;
+    const { itineraries, isLoading, hasNoFlightsFound } = props;
     const [page, setPage] = useState(0);
     const [rowsPerPage, setRowsPerPage] = useState(6);
 
@@ -515,9 +512,39 @@ export default function FlightsDisplay(props: FlightsDisplayProps) {
     const [maxDepartureDurationHours, setMaxDepartureDurationHours] = useState(52);
     const [filterByDepartureDuration, setFilterByDepartureDuration] = useState(false);
 
+    // Load sort and filter from local storage on mount
+    useMemo(() => {
+        if (!localStorage.getItem('sort')) return;
+        const sortData = JSON.parse(localStorage.getItem('sort') || '{}');
+        setOrder(sortData.order ?? 'asc');
+        setOrderBy(sortData.orderBy ?? 'price');
+
+        if (!localStorage.getItem('filters')) return;
+        const filtersData = JSON.parse(localStorage.getItem('filters') || '{}');
+        setFilterByPrice(filtersData.filterByPrice ?? true);
+        setMaxPrice(filtersData.maxPrice ?? 5000);
+        setFilterByDepartureDuration(filtersData.filterByDepartureDuration ?? false);
+        setMaxDepartureDurationHours(filtersData.maxDepartureDurationHours ?? 52);
+    }, []);
+
+
+    // Save sort and filter to local storage on change
+    useEffect(() => {
+        localStorage.setItem('sort', JSON.stringify({ order, orderBy }));
+        localStorage.setItem('filters', JSON.stringify({
+            filterByPrice, filterByDepartureDuration, maxPrice, maxDepartureDurationHours
+        }));
+    }, [order, orderBy, filterByPrice, filterByDepartureDuration, maxPrice, maxDepartureDurationHours]);
+
+
+
+
+
+
     const handleChangePage = (_e: unknown, newPage: number) => {
         setPage(newPage);
     };
+
     const handleChangeRowsPerPage = (event: React.ChangeEvent<HTMLInputElement>) => {
         setRowsPerPage(parseInt(event.target.value, 10));
         setPage(0);
@@ -548,7 +575,9 @@ export default function FlightsDisplay(props: FlightsDisplayProps) {
 
 
     return (
-        <Paper elevation={2}>
+        <Paper elevation={2} sx={{
+            borderRadius: 2
+        }}>
             <TableToolbar>
                 <SortMenu
                     setOrder={setOrder}
@@ -600,41 +629,27 @@ export default function FlightsDisplay(props: FlightsDisplayProps) {
                 </FilterMenu>
 
             </TableToolbar>
-            <Divider />
+            <Divider /><Divider />
             <TableContainer sx={{ p: 2, pt: 0 }}>
                 <Table size="small">
-                    {/* <TableHead>
-                        <TableRow>
-                            <TableCell>Flight</TableCell>
-                            <TableCell>
-                                Time
-                            </TableCell>
-                            <TableCell sx={{
-                                display: {
-                                    xs: 'none',
-                                    sm: 'table-cell'
-                                }
-                            }}>
-                                Price
-                            </TableCell>
-                            <TableCell align="right" sx={{
-                                p: {
-                                    xs: 0,
-                                    sm: 1
-                                }
-                            }}></TableCell>
-                        </TableRow>
-                    </TableHead> */}
                     <TableBody>
-                        {!isLoading && visibleRows.map((itinerary) => (
-                            <FlightRow key={itinerary.id} itinerary={itinerary} />
-                        ))}
+                        {!isLoading && visibleRows.map((itinerary) => <FlightRow key={itinerary.id}
+                            itinerary={itinerary} />)}
                         {emptyRows > 0 && (
-                            <TableRow style={{ height: 54 * emptyRows }}>
-                                <TableCell colSpan={6} />
+                            <TableRow style={{ height: 56 * emptyRows }}>
+                                <TableCell colSpan={4} />
                             </TableRow>
                         )}
+
                         {(isLoading) && <SkeletonRows rows={rowsPerPage} />}
+
+                        {(filteredRows.length === 0) && <TableRow>
+                            <TableCell colSpan={4} align="center" sx={{ py: 4 }}>
+                                <Typography variant='h6' fontWeight='light' color={'text.secondary'}>
+                                    {(hasNoFlightsFound || (itineraries.length > 0) ? 'No flights found' : 'Awaiting your search!')}
+                                </Typography>
+                            </TableCell>
+                        </TableRow>}
                     </TableBody>
                 </Table>
             </TableContainer>

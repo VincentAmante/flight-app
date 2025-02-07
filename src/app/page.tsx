@@ -13,16 +13,21 @@ export default function Home() {
   const [search, setSearch] = useState<QuerySchemaType | null>(null);
   const [itineraries, setItineraries] = useState<ItinerariesEntity[]>([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [hasNoFlightsFound, setNoFlightsFound] = useState(false);
 
   useEffect(() => {
     async function fetchFlights() {
       if (search){
         setIsLoading(true);
         await getFlightsMock(search).then((res) => {
-          console.log(res);
-
-          if (res.flights && res.flights.itineraries)
+          if (res.flights && res.flights.itineraries){
             setItineraries(res.flights.itineraries)
+            if (res.flights.itineraries.length === 0){
+              setNoFlightsFound(true);
+            } else {
+              setNoFlightsFound(false);
+            }
+          }
         }).then(() => setIsLoading(false));
       }
     }
@@ -37,7 +42,7 @@ export default function Home() {
       <Image src='/splash-mobile.png' width={750} height={1334} alt="AirScrapper" className='block sm:hidden absolute top-0 left-0 w-full -z-10 select-none' />
       <Stack spacing={2}>
         <SearchForm onSubmit={(data) => setSearch(data)} />
-        <FlightsDisplay itineraries={itineraries} isLoading={isLoading} />
+        <FlightsDisplay itineraries={itineraries} isLoading={isLoading} hasNoFlightsFound={hasNoFlightsFound} />
       </Stack>
     </Container>
   );
