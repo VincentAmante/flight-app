@@ -12,6 +12,7 @@
     "@emotion/cache": "^11.14.0",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
+    "@fontsource-variable/montserrat": "^5.1.1",
     "@fontsource/roboto": "^5.1.1",
     "@hookform/resolvers": "^3.10.0",
     "@mui/icons-material": "^6.4.3",
