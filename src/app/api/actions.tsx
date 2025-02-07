@@ -1,6 +1,7 @@
 'use server'
 import { FlightData, SAMPLE_RESULT, AirportData } from "../../../utils/airscrapper-types"
 import { QuerySchema, QuerySchemaType } from "../../../utils/airscrapper-schemas"
+import MOCK_RESULT from "../../../utils/mock-result.json"
 
 interface GetFlightsArgs {
     originSkyId: string
@@ -81,16 +82,18 @@ export async function getFlights(query: QuerySchemaType) {
 
     if (!originData || !destinationData || originData.length === 0 || destinationData.length === 0)
         throw new Error('No airports found')
+    try {
+        let flights: FlightData | null = null
 
-    // NOTE: To save on API costs, we only fetch the first airport in each list
-    for (let originAirportIndex = 0; originAirportIndex < 1; originAirportIndex++) {
-        if (!originData[originAirportIndex]) continue
 
-        for (let destinationAirportIndex = 0; destinationAirportIndex < 1; destinationAirportIndex++) {
-            if (!destinationData[destinationAirportIndex]) continue
+        // NOTE: To save on API costs, we only fetch the first airport in each list
+        for (let originAirportIndex = 0; originAirportIndex < 1; originAirportIndex++) {
+            if (!originData[originAirportIndex]) continue
 
-            try {
-                const flights = await getFlightsData({
+            for (let destinationAirportIndex = 0; destinationAirportIndex < 1; destinationAirportIndex++) {
+                if (!destinationData[destinationAirportIndex]) continue
+
+                const flightsData = await getFlightsData({
                     originSkyId: originData[originAirportIndex].skyId,
                     originEntityId: originData[originAirportIndex].entityId,
                     destinationSkyId: destinationData[destinationAirportIndex].skyId,
@@ -99,21 +102,33 @@ export async function getFlights(query: QuerySchemaType) {
                     returnDate: query.dateRange.to || undefined,
                 }).then((data) => {
                     if (!data) throw new Error('No flights found')
-                    return data
+                    return data as FlightData
                 })
 
-                // Return the data to the client
-                return {
-                    origin: originData,
-                    destination: destinationData,
-                    flights,
-                }
-
-            } catch (error) {
-                console.error(error)
-                throw new Error('Error fetching flight data')
+                flights = flightsData
             }
         }
+
+        // Return the data to the client
+        return {
+            origin: originData,
+            destination: destinationData,
+            flights,
+        }
+    }
+    catch (error) {
+        console.error(error)
+        throw new Error('Error fetching flight data')
     }
 
+}
+
+interface FlightsData {
+    origin: AirportData[]
+    destination: AirportData[]
+    flights?: FlightData
+}
+export async function getFlightsMock(query: QuerySchemaType): Promise<FlightsData> {
+    await new Promise((resolve) => setTimeout(resolve, Math.floor(Math.random() * 2000)))
+    return MOCK_RESULT satisfies FlightsData
 }
