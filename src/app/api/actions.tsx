@@ -24,8 +24,6 @@ async function getFlightsData(search: GetFlightsArgs) {
         returnDate: search.returnDate || ''
     })
     const url = `${process.env.API_URL}${API_PATH}${params.toString()}`
-    console.log(url)
-
     try {
         return fetch(url, {
             method: 'GET',
@@ -37,7 +35,6 @@ async function getFlightsData(search: GetFlightsArgs) {
         })
             .then((res) => res.json())
             .then((data) => {
-                console.log('getFlightsData', data)
                 return data.data as FlightData
             })
     }
