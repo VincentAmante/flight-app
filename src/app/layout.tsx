@@ -6,6 +6,7 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import CustomThemeProvider from "../../components/providers/CustomThemeProvider";
+import AppHeader from "../../components/AppHeader";
 
 export const metadata: Metadata = {
   title: "Flight App",
@@ -22,6 +23,7 @@ export default function RootLayout({
       <body>
         <AppRouterCacheProvider>
           <CustomThemeProvider>
+            <AppHeader />
             {children}
           </CustomThemeProvider>
         </AppRouterCacheProvider>
