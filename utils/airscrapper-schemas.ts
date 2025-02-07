@@ -5,8 +5,6 @@ export interface GetFlightsArgs {
     destinationSkyId: string
     originEntityId: string
     destinationEntityId: string
-    // date: YYYY-MM-DD
-    // returnDate: YYYY-MM-DD
 }
 
 export interface QueryArgs {
@@ -22,10 +20,10 @@ export const QuerySchema = z
     .object({
         origin: z
             .string()
-            .min(1),
+            .min(1, "Origin is required"),
         destination: z
             .string()
-            .min(1),
+            .min(1, "Destination is required"),
         dateRange: z.object({
             from: z
                 .string()
