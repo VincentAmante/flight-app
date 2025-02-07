@@ -1,0 +1,2945 @@
+{
+    "origin": [
+        {
+            "skyId": "DXBA",
+            "entityId": "27540839",
+            "presentation": {
+                "title": "Dubai",
+                "suggestionTitle": "Dubai (Any)",
+                "subtitle": "United Arab Emirates"
+            },
+            "navigation": {
+                "entityId": "27540839",
+                "entityType": "CITY",
+                "localizedName": "Dubai",
+                "relevantFlightParams": {
+                    "skyId": "DXBA",
+                    "entityId": "27540839",
+                    "flightPlaceType": "CITY",
+                    "localizedName": "Dubai"
+                },
+                "relevantHotelParams": {
+                    "entityId": "27540839",
+                    "entityType": "CITY",
+                    "localizedName": "Dubai"
+                }
+            }
+        },
+        {
+            "skyId": "DXB",
+            "entityId": "95673506",
+            "presentation": {
+                "title": "Dubai",
+                "suggestionTitle": "Dubai (DXB)",
+                "subtitle": "United Arab Emirates"
+            },
+            "navigation": {
+                "entityId": "95673506",
+                "entityType": "AIRPORT",
+                "localizedName": "Dubai",
+                "relevantFlightParams": {
+                    "skyId": "DXB",
+                    "entityId": "95673506",
+                    "flightPlaceType": "AIRPORT",
+                    "localizedName": "Dubai"
+                },
+                "relevantHotelParams": {
+                    "entityId": "27540839",
+                    "entityType": "CITY",
+                    "localizedName": "Dubai"
+                }
+            }
+        },
+        {
+            "skyId": "DWC",
+            "entityId": "128668423",
+            "presentation": {
+                "title": "Dubai Al Maktoum International",
+                "suggestionTitle": "Dubai Al Maktoum International (DWC)",
+                "subtitle": "United Arab Emirates"
+            },
+            "navigation": {
+                "entityId": "128668423",
+                "entityType": "AIRPORT",
+                "localizedName": "Dubai Al Maktoum International",
+                "relevantFlightParams": {
+                    "skyId": "DWC",
+                    "entityId": "128668423",
+                    "flightPlaceType": "AIRPORT",
+                    "localizedName": "Dubai Al Maktoum International"
+                },
+                "relevantHotelParams": {
+                    "entityId": "27540839",
+                    "entityType": "CITY",
+                    "localizedName": "Dubai"
+                }
+            }
+        }
+    ],
+    "destination": [
+        {
+            "skyId": "NYCA",
+            "entityId": "27537542",
+            "presentation": {
+                "title": "New York",
+                "suggestionTitle": "New York (Any)",
+                "subtitle": "United States"
+            },
+            "navigation": {
+                "entityId": "27537542",
+                "entityType": "CITY",
+                "localizedName": "New York",
+                "relevantFlightParams": {
+                    "skyId": "NYCA",
+                    "entityId": "27537542",
+                    "flightPlaceType": "CITY",
+                    "localizedName": "New York"
+                },
+                "relevantHotelParams": {
+                    "entityId": "27537542",
+                    "entityType": "CITY",
+                    "localizedName": "New York"
+                }
+            }
+        },
+        {
+            "skyId": "JFK",
+            "entityId": "95565058",
+            "presentation": {
+                "title": "New York John F. Kennedy",
+                "suggestionTitle": "New York John F. Kennedy (JFK)",
+                "subtitle": "United States"
+            },
+            "navigation": {
+                "entityId": "95565058",
+                "entityType": "AIRPORT",
+                "localizedName": "New York John F. Kennedy",
+                "relevantFlightParams": {
+                    "skyId": "JFK",
+                    "entityId": "95565058",
+                    "flightPlaceType": "AIRPORT",
+                    "localizedName": "New York John F. Kennedy"
+                },
+                "relevantHotelParams": {
+                    "entityId": "27537542",
+                    "entityType": "CITY",
+                    "localizedName": "New York"
+                }
+            }
+        },
+        {
+            "skyId": "EWR",
+            "entityId": "95565059",
+            "presentation": {
+                "title": "New York Newark",
+                "suggestionTitle": "New York Newark (EWR)",
+                "subtitle": "United States"
+            },
+            "navigation": {
+                "entityId": "95565059",
+                "entityType": "AIRPORT",
+                "localizedName": "New York Newark",
+                "relevantFlightParams": {
+                    "skyId": "EWR",
+                    "entityId": "95565059",
+                    "flightPlaceType": "AIRPORT",
+                    "localizedName": "New York Newark"
+                },
+                "relevantHotelParams": {
+                    "entityId": "27537542",
+                    "entityType": "CITY",
+                    "localizedName": "New York"
+                }
+            }
+        },
+        {
+            "skyId": "LGA",
+            "entityId": "95565057",
+            "presentation": {
+                "title": "New York LaGuardia",
+                "suggestionTitle": "New York LaGuardia (LGA)",
+                "subtitle": "United States"
+            },
+            "navigation": {
+                "entityId": "95565057",
+                "entityType": "AIRPORT",
+                "localizedName": "New York LaGuardia",
+                "relevantFlightParams": {
+                    "skyId": "LGA",
+                    "entityId": "95565057",
+                    "flightPlaceType": "AIRPORT",
+                    "localizedName": "New York LaGuardia"
+                },
+                "relevantHotelParams": {
+                    "entityId": "27537542",
+                    "entityType": "CITY",
+                    "localizedName": "New York"
+                }
+            }
+        },
+        {
+            "skyId": "SWF",
+            "entityId": "95566280",
+            "presentation": {
+                "title": "Stewart International",
+                "suggestionTitle": "Stewart International (SWF)",
+                "subtitle": "United States"
+            },
+            "navigation": {
+                "entityId": "95566280",
+                "entityType": "AIRPORT",
+                "localizedName": "Stewart International",
+                "relevantFlightParams": {
+                    "skyId": "SWF",
+                    "entityId": "95566280",
+                    "flightPlaceType": "AIRPORT",
+                    "localizedName": "Stewart International"
+                },
+                "relevantHotelParams": {
+                    "entityId": "27537542",
+                    "entityType": "CITY",
+                    "localizedName": "New York"
+                }
+            }
+        },
+        {
+            "skyId": "ALB",
+            "entityId": "95674229",
+            "presentation": {
+                "title": "Albany",
+                "suggestionTitle": "Albany (ALB)",
+                "subtitle": "United States"
+            },
+            "navigation": {
+                "entityId": "95674229",
+                "entityType": "AIRPORT",
+                "localizedName": "Albany",
+                "relevantFlightParams": {
+                    "skyId": "ALB",
+                    "entityId": "95674229",
+                    "flightPlaceType": "AIRPORT",
+                    "localizedName": "Albany"
+                },
+                "relevantHotelParams": {
+                    "entityId": "27536537",
+                    "entityType": "CITY",
+                    "localizedName": "Albany"
+                }
+            }
+        },
+        {
+            "skyId": "BUF",
+            "entityId": "95673358",
+            "presentation": {
+                "title": "Buffalo Niagara",
+                "suggestionTitle": "Buffalo Niagara (BUF)",
+                "subtitle": "United States"
+            },
+            "navigation": {
+                "entityId": "95673358",
+                "entityType": "AIRPORT",
+                "localizedName": "Buffalo Niagara",
+                "relevantFlightParams": {
+                    "skyId": "BUF",
+                    "entityId": "95673358",
+                    "flightPlaceType": "AIRPORT",
+                    "localizedName": "Buffalo Niagara"
+                },
+                "relevantHotelParams": {
+                    "entityId": "27539605",
+                    "entityType": "CITY",
+                    "localizedName": "Buffalo"
+                }
+            }
+        },
+        {
+            "skyId": "SYR",
+            "entityId": "95674004",
+            "presentation": {
+                "title": "Syracuse",
+                "suggestionTitle": "Syracuse (SYR)",
+                "subtitle": "United States"
+            },
+            "navigation": {
+                "entityId": "95674004",
+                "entityType": "AIRPORT",
+                "localizedName": "Syracuse",
+                "relevantFlightParams": {
+                    "skyId": "SYR",
+                    "entityId": "95674004",
+                    "flightPlaceType": "AIRPORT",
+                    "localizedName": "Syracuse"
+                },
+                "relevantHotelParams": {
+                    "entityId": "27547103",
+                    "entityType": "CITY",
+                    "localizedName": "Syracuse"
+                }
+            }
+        }
+    ],
+    "flights": {
+        "context": {
+            "status": "incomplete",
+            "sessionId": "Cl0IARJZCk4KJGMzNzZjZGFkLTVhNTQtNDA2Ny1hNmJhLTA1ZDNjNGVhMGVhORACGiRiMGU4ZTVmYy0yMGRhLTRkYjMtYmY0Yi0zZjE0OGQ4ZDdkMzkQuJeP1s0yGAESKHVzc18xOWE5NGZmYy1iNGJjLTRkZDUtYjljZi0wZWNlNTM0MjMwM2YiAlVT",
+            "totalResults": 10
+        },
+        "itineraries": [
+            {
+                "id": "11182-2502070830--32348-0-12712-2502071355|12712-2502121040--32348-0-11182-2502130810",
+                "price": {
+                    "raw": 1239.97,
+                    "formatted": "$1,240",
+                    "pricingOptionId": "R7nqW3ruT4sF"
+                },
+                "legs": [
+                    {
+                        "id": "11182-2502070830--32348-0-12712-2502071355",
+                        "origin": {
+                            "id": "DXB",
+                            "entityId": "95673506",
+                            "name": "Dubai",
+                            "displayCode": "DXB",
+                            "city": "Dubai",
+                            "country": "United Arab Emirates",
+                            "isHighlighted": false
+                        },
+                        "destination": {
+                            "id": "JFK",
+                            "entityId": "95565058",
+                            "name": "New York John F. Kennedy",
+                            "displayCode": "JFK",
+                            "city": "New York",
+                            "country": "United States",
+                            "isHighlighted": false
+                        },
+                        "durationInMinutes": 865,
+                        "stopCount": 0,
+                        "isSmallestStops": false,
+                        "departure": "2025-02-07T08:30:00",
+                        "arrival": "2025-02-07T13:55:00",
+                        "timeDeltaInDays": 0,
+                        "carriers": {
+                            "marketing": [
+                                {
+                                    "id": -32348,
+                                    "alternateId": "EK",
+                                    "logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/EK.png",
+                                    "name": "Emirates"
+                                }
+                            ],
+                            "operationType": "fully_operated"
+                        },
+                        "segments": [
+                            {
+                                "id": "11182-12712-2502070830-2502071355--32348",
+                                "origin": {
+                                    "flightPlaceId": "DXB",
+                                    "displayCode": "DXB",
+                                    "parent": {
+                                        "flightPlaceId": "DXBA",
+                                        "displayCode": "DXB",
+                                        "name": "Dubai",
+                                        "type": "City"
+                                    },
+                                    "name": "Dubai",
+                                    "type": "Airport",
+                                    "country": "United Arab Emirates"
+                                },
+                                "destination": {
+                                    "flightPlaceId": "JFK",
+                                    "displayCode": "JFK",
+                                    "parent": {
+                                        "flightPlaceId": "NYCA",
+                                        "displayCode": "NYC",
+                                        "name": "New York",
+                                        "type": "City"
+                                    },
+                                    "name": "New York John F. Kennedy",
+                                    "type": "Airport",
+                                    "country": "United States"
+                                },
+                                "departure": "2025-02-07T08:30:00",
+                                "arrival": "2025-02-07T13:55:00",
+                                "durationInMinutes": 865,
+                                "flightNumber": "201",
+                                "marketingCarrier": {
+                                    "id": -32348,
+                                    "name": "Emirates",
+                                    "alternateId": "EK",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                },
+                                "operatingCarrier": {
+                                    "id": -32348,
+                                    "name": "Emirates",
+                                    "alternateId": "EK",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "id": "12712-2502121040--32348-0-11182-2502130810",
+                        "origin": {
+                            "id": "JFK",
+                            "entityId": "95565058",
+                            "name": "New York John F. Kennedy",
+                            "displayCode": "JFK",
+                            "city": "New York",
+                            "country": "United States",
+                            "isHighlighted": false
+                        },
+                        "destination": {
+                            "id": "DXB",
+                            "entityId": "95673506",
+                            "name": "Dubai",
+                            "displayCode": "DXB",
+                            "city": "Dubai",
+                            "country": "United Arab Emirates",
+                            "isHighlighted": false
+                        },
+                        "durationInMinutes": 750,
+                        "stopCount": 0,
+                        "isSmallestStops": false,
+                        "departure": "2025-02-12T10:40:00",
+                        "arrival": "2025-02-13T08:10:00",
+                        "timeDeltaInDays": 1,
+                        "carriers": {
+                            "marketing": [
+                                {
+                                    "id": -32348,
+                                    "alternateId": "EK",
+                                    "logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/EK.png",
+                                    "name": "Emirates"
+                                }
+                            ],
+                            "operationType": "fully_operated"
+                        },
+                        "segments": [
+                            {
+                                "id": "12712-11182-2502121040-2502130810--32348",
+                                "origin": {
+                                    "flightPlaceId": "JFK",
+                                    "displayCode": "JFK",
+                                    "parent": {
+                                        "flightPlaceId": "NYCA",
+                                        "displayCode": "NYC",
+                                        "name": "New York",
+                                        "type": "City"
+                                    },
+                                    "name": "New York John F. Kennedy",
+                                    "type": "Airport",
+                                    "country": "United States"
+                                },
+                                "destination": {
+                                    "flightPlaceId": "DXB",
+                                    "displayCode": "DXB",
+                                    "parent": {
+                                        "flightPlaceId": "DXBA",
+                                        "displayCode": "DXB",
+                                        "name": "Dubai",
+                                        "type": "City"
+                                    },
+                                    "name": "Dubai",
+                                    "type": "Airport",
+                                    "country": "United Arab Emirates"
+                                },
+                                "departure": "2025-02-12T10:40:00",
+                                "arrival": "2025-02-13T08:10:00",
+                                "durationInMinutes": 750,
+                                "flightNumber": "204",
+                                "marketingCarrier": {
+                                    "id": -32348,
+                                    "name": "Emirates",
+                                    "alternateId": "EK",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                },
+                                "operatingCarrier": {
+                                    "id": -32348,
+                                    "name": "Emirates",
+                                    "alternateId": "EK",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "isSelfTransfer": false,
+                "isProtectedSelfTransfer": false,
+                "farePolicy": {
+                    "isChangeAllowed": false,
+                    "isPartiallyChangeable": false,
+                    "isCancellationAllowed": false,
+                    "isPartiallyRefundable": false
+                },
+                "fareAttributes": {},
+                "tags": [
+                    "second_shortest"
+                ],
+                "isMashUp": false,
+                "hasFlexibleOptions": false,
+                "score": 0.999
+            },
+            {
+                "id": "11182-2502070215--32480-1-12712-2502071140|11442-2502122135--32480-1-11182-2502132340",
+                "price": {
+                    "raw": 945.47,
+                    "formatted": "$946",
+                    "pricingOptionId": "PDtKL2FKPc5W"
+                },
+                "legs": [
+                    {
+                        "id": "11182-2502070215--32480-1-12712-2502071140",
+                        "origin": {
+                            "id": "DXB",
+                            "entityId": "95673506",
+                            "name": "Dubai",
+                            "displayCode": "DXB",
+                            "city": "Dubai",
+                            "country": "United Arab Emirates",
+                            "isHighlighted": false
+                        },
+                        "destination": {
+                            "id": "JFK",
+                            "entityId": "95565058",
+                            "name": "New York John F. Kennedy",
+                            "displayCode": "JFK",
+                            "city": "New York",
+                            "country": "United States",
+                            "isHighlighted": true
+                        },
+                        "durationInMinutes": 1105,
+                        "stopCount": 1,
+                        "isSmallestStops": false,
+                        "departure": "2025-02-07T02:15:00",
+                        "arrival": "2025-02-07T11:40:00",
+                        "timeDeltaInDays": 0,
+                        "carriers": {
+                            "marketing": [
+                                {
+                                    "id": -32480,
+                                    "alternateId": "BA",
+                                    "logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/BA.png",
+                                    "name": "British Airways"
+                                }
+                            ],
+                            "operating": [
+                                {
+                                    "id": -32573,
+                                    "alternateId": "AA",
+                                    "logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/AA.png",
+                                    "name": "American Airlines"
+                                }
+                            ],
+                            "operationType": "partially_operated"
+                        },
+                        "segments": [
+                            {
+                                "id": "11182-13554-2502070215-2502070625--32480",
+                                "origin": {
+                                    "flightPlaceId": "DXB",
+                                    "displayCode": "DXB",
+                                    "parent": {
+                                        "flightPlaceId": "DXBA",
+                                        "displayCode": "DXB",
+                                        "name": "Dubai",
+                                        "type": "City"
+                                    },
+                                    "name": "Dubai",
+                                    "type": "Airport",
+                                    "country": "United Arab Emirates"
+                                },
+                                "destination": {
+                                    "flightPlaceId": "LHR",
+                                    "displayCode": "LHR",
+                                    "parent": {
+                                        "flightPlaceId": "LOND",
+                                        "displayCode": "LON",
+                                        "name": "London",
+                                        "type": "City"
+                                    },
+                                    "name": "London Heathrow",
+                                    "type": "Airport",
+                                    "country": "United Kingdom"
+                                },
+                                "departure": "2025-02-07T02:15:00",
+                                "arrival": "2025-02-07T06:25:00",
+                                "durationInMinutes": 490,
+                                "flightNumber": "106",
+                                "marketingCarrier": {
+                                    "id": -32480,
+                                    "name": "British Airways",
+                                    "alternateId": "BA",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                },
+                                "operatingCarrier": {
+                                    "id": -32480,
+                                    "name": "British Airways",
+                                    "alternateId": "BA",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                }
+                            },
+                            {
+                                "id": "13554-12712-2502070840-2502071140--32480",
+                                "origin": {
+                                    "flightPlaceId": "LHR",
+                                    "displayCode": "LHR",
+                                    "parent": {
+                                        "flightPlaceId": "LOND",
+                                        "displayCode": "LON",
+                                        "name": "London",
+                                        "type": "City"
+                                    },
+                                    "name": "London Heathrow",
+                                    "type": "Airport",
+                                    "country": "United Kingdom"
+                                },
+                                "destination": {
+                                    "flightPlaceId": "JFK",
+                                    "displayCode": "JFK",
+                                    "parent": {
+                                        "flightPlaceId": "NYCA",
+                                        "displayCode": "NYC",
+                                        "name": "New York",
+                                        "type": "City"
+                                    },
+                                    "name": "New York John F. Kennedy",
+                                    "type": "Airport",
+                                    "country": "United States"
+                                },
+                                "departure": "2025-02-07T08:40:00",
+                                "arrival": "2025-02-07T11:40:00",
+                                "durationInMinutes": 480,
+                                "flightNumber": "1516",
+                                "marketingCarrier": {
+                                    "id": -32480,
+                                    "name": "British Airways",
+                                    "alternateId": "BA",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                },
+                                "operatingCarrier": {
+                                    "id": -32573,
+                                    "name": "American Airlines",
+                                    "alternateId": "AA",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "id": "11442-2502122135--32480-1-11182-2502132340",
+                        "origin": {
+                            "id": "EWR",
+                            "entityId": "95565059",
+                            "name": "New York Newark",
+                            "displayCode": "EWR",
+                            "city": "New York",
+                            "country": "United States",
+                            "isHighlighted": true
+                        },
+                        "destination": {
+                            "id": "DXB",
+                            "entityId": "95673506",
+                            "name": "Dubai",
+                            "displayCode": "DXB",
+                            "city": "Dubai",
+                            "country": "United Arab Emirates",
+                            "isHighlighted": false
+                        },
+                        "durationInMinutes": 1025,
+                        "stopCount": 1,
+                        "isSmallestStops": false,
+                        "departure": "2025-02-12T21:35:00",
+                        "arrival": "2025-02-13T23:40:00",
+                        "timeDeltaInDays": 1,
+                        "carriers": {
+                            "marketing": [
+                                {
+                                    "id": -32480,
+                                    "alternateId": "BA",
+                                    "logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/BA.png",
+                                    "name": "British Airways"
+                                }
+                            ],
+                            "operationType": "fully_operated"
+                        },
+                        "segments": [
+                            {
+                                "id": "11442-13554-2502122135-2502130925--32480",
+                                "origin": {
+                                    "flightPlaceId": "EWR",
+                                    "displayCode": "EWR",
+                                    "parent": {
+                                        "flightPlaceId": "NYCA",
+                                        "displayCode": "NYC",
+                                        "name": "New York",
+                                        "type": "City"
+                                    },
+                                    "name": "New York Newark",
+                                    "type": "Airport",
+                                    "country": "United States"
+                                },
+                                "destination": {
+                                    "flightPlaceId": "LHR",
+                                    "displayCode": "LHR",
+                                    "parent": {
+                                        "flightPlaceId": "LOND",
+                                        "displayCode": "LON",
+                                        "name": "London",
+                                        "type": "City"
+                                    },
+                                    "name": "London Heathrow",
+                                    "type": "Airport",
+                                    "country": "United Kingdom"
+                                },
+                                "departure": "2025-02-12T21:35:00",
+                                "arrival": "2025-02-13T09:25:00",
+                                "durationInMinutes": 410,
+                                "flightNumber": "188",
+                                "marketingCarrier": {
+                                    "id": -32480,
+                                    "name": "British Airways",
+                                    "alternateId": "BA",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                },
+                                "operatingCarrier": {
+                                    "id": -32480,
+                                    "name": "British Airways",
+                                    "alternateId": "BA",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                }
+                            },
+                            {
+                                "id": "13554-11182-2502131235-2502132340--32480",
+                                "origin": {
+                                    "flightPlaceId": "LHR",
+                                    "displayCode": "LHR",
+                                    "parent": {
+                                        "flightPlaceId": "LOND",
+                                        "displayCode": "LON",
+                                        "name": "London",
+                                        "type": "City"
+                                    },
+                                    "name": "London Heathrow",
+                                    "type": "Airport",
+                                    "country": "United Kingdom"
+                                },
+                                "destination": {
+                                    "flightPlaceId": "DXB",
+                                    "displayCode": "DXB",
+                                    "parent": {
+                                        "flightPlaceId": "DXBA",
+                                        "displayCode": "DXB",
+                                        "name": "Dubai",
+                                        "type": "City"
+                                    },
+                                    "name": "Dubai",
+                                    "type": "Airport",
+                                    "country": "United Arab Emirates"
+                                },
+                                "departure": "2025-02-13T12:35:00",
+                                "arrival": "2025-02-13T23:40:00",
+                                "durationInMinutes": 425,
+                                "flightNumber": "107",
+                                "marketingCarrier": {
+                                    "id": -32480,
+                                    "name": "British Airways",
+                                    "alternateId": "BA",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                },
+                                "operatingCarrier": {
+                                    "id": -32480,
+                                    "name": "British Airways",
+                                    "alternateId": "BA",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "isSelfTransfer": false,
+                "isProtectedSelfTransfer": false,
+                "farePolicy": {
+                    "isChangeAllowed": false,
+                    "isPartiallyChangeable": false,
+                    "isCancellationAllowed": false,
+                    "isPartiallyRefundable": false
+                },
+                "fareAttributes": {},
+                "isMashUp": false,
+                "hasFlexibleOptions": false,
+                "score": 0.920608
+            },
+            {
+                "id": "11182-2502070235--32348-0-12712-2502070815|12712-2502121040--32348-0-11182-2502130810",
+                "price": {
+                    "raw": 1307.97,
+                    "formatted": "$1,308",
+                    "pricingOptionId": "lxoxxrG9RswT"
+                },
+                "legs": [
+                    {
+                        "id": "11182-2502070235--32348-0-12712-2502070815",
+                        "origin": {
+                            "id": "DXB",
+                            "entityId": "95673506",
+                            "name": "Dubai",
+                            "displayCode": "DXB",
+                            "city": "Dubai",
+                            "country": "United Arab Emirates",
+                            "isHighlighted": false
+                        },
+                        "destination": {
+                            "id": "JFK",
+                            "entityId": "95565058",
+                            "name": "New York John F. Kennedy",
+                            "displayCode": "JFK",
+                            "city": "New York",
+                            "country": "United States",
+                            "isHighlighted": false
+                        },
+                        "durationInMinutes": 880,
+                        "stopCount": 0,
+                        "isSmallestStops": false,
+                        "departure": "2025-02-07T02:35:00",
+                        "arrival": "2025-02-07T08:15:00",
+                        "timeDeltaInDays": 0,
+                        "carriers": {
+                            "marketing": [
+                                {
+                                    "id": -32348,
+                                    "alternateId": "EK",
+                                    "logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/EK.png",
+                                    "name": "Emirates"
+                                }
+                            ],
+                            "operationType": "fully_operated"
+                        },
+                        "segments": [
+                            {
+                                "id": "11182-12712-2502070235-2502070815--32348",
+                                "origin": {
+                                    "flightPlaceId": "DXB",
+                                    "displayCode": "DXB",
+                                    "parent": {
+                                        "flightPlaceId": "DXBA",
+                                        "displayCode": "DXB",
+                                        "name": "Dubai",
+                                        "type": "City"
+                                    },
+                                    "name": "Dubai",
+                                    "type": "Airport",
+                                    "country": "United Arab Emirates"
+                                },
+                                "destination": {
+                                    "flightPlaceId": "JFK",
+                                    "displayCode": "JFK",
+                                    "parent": {
+                                        "flightPlaceId": "NYCA",
+                                        "displayCode": "NYC",
+                                        "name": "New York",
+                                        "type": "City"
+                                    },
+                                    "name": "New York John F. Kennedy",
+                                    "type": "Airport",
+                                    "country": "United States"
+                                },
+                                "departure": "2025-02-07T02:35:00",
+                                "arrival": "2025-02-07T08:15:00",
+                                "durationInMinutes": 880,
+                                "flightNumber": "203",
+                                "marketingCarrier": {
+                                    "id": -32348,
+                                    "name": "Emirates",
+                                    "alternateId": "EK",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                },
+                                "operatingCarrier": {
+                                    "id": -32348,
+                                    "name": "Emirates",
+                                    "alternateId": "EK",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "id": "12712-2502121040--32348-0-11182-2502130810",
+                        "origin": {
+                            "id": "JFK",
+                            "entityId": "95565058",
+                            "name": "New York John F. Kennedy",
+                            "displayCode": "JFK",
+                            "city": "New York",
+                            "country": "United States",
+                            "isHighlighted": false
+                        },
+                        "destination": {
+                            "id": "DXB",
+                            "entityId": "95673506",
+                            "name": "Dubai",
+                            "displayCode": "DXB",
+                            "city": "Dubai",
+                            "country": "United Arab Emirates",
+                            "isHighlighted": false
+                        },
+                        "durationInMinutes": 750,
+                        "stopCount": 0,
+                        "isSmallestStops": false,
+                        "departure": "2025-02-12T10:40:00",
+                        "arrival": "2025-02-13T08:10:00",
+                        "timeDeltaInDays": 1,
+                        "carriers": {
+                            "marketing": [
+                                {
+                                    "id": -32348,
+                                    "alternateId": "EK",
+                                    "logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/EK.png",
+                                    "name": "Emirates"
+                                }
+                            ],
+                            "operationType": "fully_operated"
+                        },
+                        "segments": [
+                            {
+                                "id": "12712-11182-2502121040-2502130810--32348",
+                                "origin": {
+                                    "flightPlaceId": "JFK",
+                                    "displayCode": "JFK",
+                                    "parent": {
+                                        "flightPlaceId": "NYCA",
+                                        "displayCode": "NYC",
+                                        "name": "New York",
+                                        "type": "City"
+                                    },
+                                    "name": "New York John F. Kennedy",
+                                    "type": "Airport",
+                                    "country": "United States"
+                                },
+                                "destination": {
+                                    "flightPlaceId": "DXB",
+                                    "displayCode": "DXB",
+                                    "parent": {
+                                        "flightPlaceId": "DXBA",
+                                        "displayCode": "DXB",
+                                        "name": "Dubai",
+                                        "type": "City"
+                                    },
+                                    "name": "Dubai",
+                                    "type": "Airport",
+                                    "country": "United Arab Emirates"
+                                },
+                                "departure": "2025-02-12T10:40:00",
+                                "arrival": "2025-02-13T08:10:00",
+                                "durationInMinutes": 750,
+                                "flightNumber": "204",
+                                "marketingCarrier": {
+                                    "id": -32348,
+                                    "name": "Emirates",
+                                    "alternateId": "EK",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                },
+                                "operatingCarrier": {
+                                    "id": -32348,
+                                    "name": "Emirates",
+                                    "alternateId": "EK",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "isSelfTransfer": false,
+                "isProtectedSelfTransfer": false,
+                "farePolicy": {
+                    "isChangeAllowed": false,
+                    "isPartiallyChangeable": false,
+                    "isCancellationAllowed": false,
+                    "isPartiallyRefundable": false
+                },
+                "fareAttributes": {},
+                "isMashUp": false,
+                "hasFlexibleOptions": false,
+                "score": 0.857842
+            },
+            {
+                "id": "11182-2502070830--32348-0-12712-2502071355|12712-2502122300--32348-0-11182-2502132025",
+                "price": {
+                    "raw": 1351.97,
+                    "formatted": "$1,352",
+                    "pricingOptionId": "AMgfIJHAzMKY"
+                },
+                "legs": [
+                    {
+                        "id": "11182-2502070830--32348-0-12712-2502071355",
+                        "origin": {
+                            "id": "DXB",
+                            "entityId": "95673506",
+                            "name": "Dubai",
+                            "displayCode": "DXB",
+                            "city": "Dubai",
+                            "country": "United Arab Emirates",
+                            "isHighlighted": false
+                        },
+                        "destination": {
+                            "id": "JFK",
+                            "entityId": "95565058",
+                            "name": "New York John F. Kennedy",
+                            "displayCode": "JFK",
+                            "city": "New York",
+                            "country": "United States",
+                            "isHighlighted": false
+                        },
+                        "durationInMinutes": 865,
+                        "stopCount": 0,
+                        "isSmallestStops": false,
+                        "departure": "2025-02-07T08:30:00",
+                        "arrival": "2025-02-07T13:55:00",
+                        "timeDeltaInDays": 0,
+                        "carriers": {
+                            "marketing": [
+                                {
+                                    "id": -32348,
+                                    "alternateId": "EK",
+                                    "logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/EK.png",
+                                    "name": "Emirates"
+                                }
+                            ],
+                            "operationType": "fully_operated"
+                        },
+                        "segments": [
+                            {
+                                "id": "11182-12712-2502070830-2502071355--32348",
+                                "origin": {
+                                    "flightPlaceId": "DXB",
+                                    "displayCode": "DXB",
+                                    "parent": {
+                                        "flightPlaceId": "DXBA",
+                                        "displayCode": "DXB",
+                                        "name": "Dubai",
+                                        "type": "City"
+                                    },
+                                    "name": "Dubai",
+                                    "type": "Airport",
+                                    "country": "United Arab Emirates"
+                                },
+                                "destination": {
+                                    "flightPlaceId": "JFK",
+                                    "displayCode": "JFK",
+                                    "parent": {
+                                        "flightPlaceId": "NYCA",
+                                        "displayCode": "NYC",
+                                        "name": "New York",
+                                        "type": "City"
+                                    },
+                                    "name": "New York John F. Kennedy",
+                                    "type": "Airport",
+                                    "country": "United States"
+                                },
+                                "departure": "2025-02-07T08:30:00",
+                                "arrival": "2025-02-07T13:55:00",
+                                "durationInMinutes": 865,
+                                "flightNumber": "201",
+                                "marketingCarrier": {
+                                    "id": -32348,
+                                    "name": "Emirates",
+                                    "alternateId": "EK",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                },
+                                "operatingCarrier": {
+                                    "id": -32348,
+                                    "name": "Emirates",
+                                    "alternateId": "EK",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "id": "12712-2502122300--32348-0-11182-2502132025",
+                        "origin": {
+                            "id": "JFK",
+                            "entityId": "95565058",
+                            "name": "New York John F. Kennedy",
+                            "displayCode": "JFK",
+                            "city": "New York",
+                            "country": "United States",
+                            "isHighlighted": false
+                        },
+                        "destination": {
+                            "id": "DXB",
+                            "entityId": "95673506",
+                            "name": "Dubai",
+                            "displayCode": "DXB",
+                            "city": "Dubai",
+                            "country": "United Arab Emirates",
+                            "isHighlighted": false
+                        },
+                        "durationInMinutes": 745,
+                        "stopCount": 0,
+                        "isSmallestStops": false,
+                        "departure": "2025-02-12T23:00:00",
+                        "arrival": "2025-02-13T20:25:00",
+                        "timeDeltaInDays": 1,
+                        "carriers": {
+                            "marketing": [
+                                {
+                                    "id": -32348,
+                                    "alternateId": "EK",
+                                    "logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/EK.png",
+                                    "name": "Emirates"
+                                }
+                            ],
+                            "operationType": "fully_operated"
+                        },
+                        "segments": [
+                            {
+                                "id": "12712-11182-2502122300-2502132025--32348",
+                                "origin": {
+                                    "flightPlaceId": "JFK",
+                                    "displayCode": "JFK",
+                                    "parent": {
+                                        "flightPlaceId": "NYCA",
+                                        "displayCode": "NYC",
+                                        "name": "New York",
+                                        "type": "City"
+                                    },
+                                    "name": "New York John F. Kennedy",
+                                    "type": "Airport",
+                                    "country": "United States"
+                                },
+                                "destination": {
+                                    "flightPlaceId": "DXB",
+                                    "displayCode": "DXB",
+                                    "parent": {
+                                        "flightPlaceId": "DXBA",
+                                        "displayCode": "DXB",
+                                        "name": "Dubai",
+                                        "type": "City"
+                                    },
+                                    "name": "Dubai",
+                                    "type": "Airport",
+                                    "country": "United Arab Emirates"
+                                },
+                                "departure": "2025-02-12T23:00:00",
+                                "arrival": "2025-02-13T20:25:00",
+                                "durationInMinutes": 745,
+                                "flightNumber": "202",
+                                "marketingCarrier": {
+                                    "id": -32348,
+                                    "name": "Emirates",
+                                    "alternateId": "EK",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                },
+                                "operatingCarrier": {
+                                    "id": -32348,
+                                    "name": "Emirates",
+                                    "alternateId": "EK",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "isSelfTransfer": false,
+                "isProtectedSelfTransfer": false,
+                "farePolicy": {
+                    "isChangeAllowed": false,
+                    "isPartiallyChangeable": false,
+                    "isCancellationAllowed": false,
+                    "isPartiallyRefundable": false
+                },
+                "fareAttributes": {},
+                "tags": [
+                    "shortest"
+                ],
+                "isMashUp": false,
+                "hasFlexibleOptions": false,
+                "score": 0.788781
+            },
+            {
+                "id": "11182-2502070215--32480-1-12712-2502071140|12712-2502122005--32480-1-11182-2502132340",
+                "price": {
+                    "raw": 936.11,
+                    "formatted": "$937",
+                    "pricingOptionId": "h4w79EohRb9q"
+                },
+                "legs": [
+                    {
+                        "id": "11182-2502070215--32480-1-12712-2502071140",
+                        "origin": {
+                            "id": "DXB",
+                            "entityId": "95673506",
+                            "name": "Dubai",
+                            "displayCode": "DXB",
+                            "city": "Dubai",
+                            "country": "United Arab Emirates",
+                            "isHighlighted": false
+                        },
+                        "destination": {
+                            "id": "JFK",
+                            "entityId": "95565058",
+                            "name": "New York John F. Kennedy",
+                            "displayCode": "JFK",
+                            "city": "New York",
+                            "country": "United States",
+                            "isHighlighted": false
+                        },
+                        "durationInMinutes": 1105,
+                        "stopCount": 1,
+                        "isSmallestStops": false,
+                        "departure": "2025-02-07T02:15:00",
+                        "arrival": "2025-02-07T11:40:00",
+                        "timeDeltaInDays": 0,
+                        "carriers": {
+                            "marketing": [
+                                {
+                                    "id": -32480,
+                                    "alternateId": "BA",
+                                    "logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/BA.png",
+                                    "name": "British Airways"
+                                }
+                            ],
+                            "operating": [
+                                {
+                                    "id": -32573,
+                                    "alternateId": "AA",
+                                    "logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/AA.png",
+                                    "name": "American Airlines"
+                                }
+                            ],
+                            "operationType": "partially_operated"
+                        },
+                        "segments": [
+                            {
+                                "id": "11182-13554-2502070215-2502070625--32480",
+                                "origin": {
+                                    "flightPlaceId": "DXB",
+                                    "displayCode": "DXB",
+                                    "parent": {
+                                        "flightPlaceId": "DXBA",
+                                        "displayCode": "DXB",
+                                        "name": "Dubai",
+                                        "type": "City"
+                                    },
+                                    "name": "Dubai",
+                                    "type": "Airport",
+                                    "country": "United Arab Emirates"
+                                },
+                                "destination": {
+                                    "flightPlaceId": "LHR",
+                                    "displayCode": "LHR",
+                                    "parent": {
+                                        "flightPlaceId": "LOND",
+                                        "displayCode": "LON",
+                                        "name": "London",
+                                        "type": "City"
+                                    },
+                                    "name": "London Heathrow",
+                                    "type": "Airport",
+                                    "country": "United Kingdom"
+                                },
+                                "departure": "2025-02-07T02:15:00",
+                                "arrival": "2025-02-07T06:25:00",
+                                "durationInMinutes": 490,
+                                "flightNumber": "106",
+                                "marketingCarrier": {
+                                    "id": -32480,
+                                    "name": "British Airways",
+                                    "alternateId": "BA",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                },
+                                "operatingCarrier": {
+                                    "id": -32480,
+                                    "name": "British Airways",
+                                    "alternateId": "BA",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                }
+                            },
+                            {
+                                "id": "13554-12712-2502070840-2502071140--32480",
+                                "origin": {
+                                    "flightPlaceId": "LHR",
+                                    "displayCode": "LHR",
+                                    "parent": {
+                                        "flightPlaceId": "LOND",
+                                        "displayCode": "LON",
+                                        "name": "London",
+                                        "type": "City"
+                                    },
+                                    "name": "London Heathrow",
+                                    "type": "Airport",
+                                    "country": "United Kingdom"
+                                },
+                                "destination": {
+                                    "flightPlaceId": "JFK",
+                                    "displayCode": "JFK",
+                                    "parent": {
+                                        "flightPlaceId": "NYCA",
+                                        "displayCode": "NYC",
+                                        "name": "New York",
+                                        "type": "City"
+                                    },
+                                    "name": "New York John F. Kennedy",
+                                    "type": "Airport",
+                                    "country": "United States"
+                                },
+                                "departure": "2025-02-07T08:40:00",
+                                "arrival": "2025-02-07T11:40:00",
+                                "durationInMinutes": 480,
+                                "flightNumber": "1516",
+                                "marketingCarrier": {
+                                    "id": -32480,
+                                    "name": "British Airways",
+                                    "alternateId": "BA",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                },
+                                "operatingCarrier": {
+                                    "id": -32573,
+                                    "name": "American Airlines",
+                                    "alternateId": "AA",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "id": "12712-2502122005--32480-1-11182-2502132340",
+                        "origin": {
+                            "id": "JFK",
+                            "entityId": "95565058",
+                            "name": "New York John F. Kennedy",
+                            "displayCode": "JFK",
+                            "city": "New York",
+                            "country": "United States",
+                            "isHighlighted": false
+                        },
+                        "destination": {
+                            "id": "DXB",
+                            "entityId": "95673506",
+                            "name": "Dubai",
+                            "displayCode": "DXB",
+                            "city": "Dubai",
+                            "country": "United Arab Emirates",
+                            "isHighlighted": false
+                        },
+                        "durationInMinutes": 1115,
+                        "stopCount": 1,
+                        "isSmallestStops": false,
+                        "departure": "2025-02-12T20:05:00",
+                        "arrival": "2025-02-13T23:40:00",
+                        "timeDeltaInDays": 1,
+                        "carriers": {
+                            "marketing": [
+                                {
+                                    "id": -32480,
+                                    "alternateId": "BA",
+                                    "logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/BA.png",
+                                    "name": "British Airways"
+                                }
+                            ],
+                            "operationType": "fully_operated"
+                        },
+                        "segments": [
+                            {
+                                "id": "12712-13554-2502122005-2502130810--32480",
+                                "origin": {
+                                    "flightPlaceId": "JFK",
+                                    "displayCode": "JFK",
+                                    "parent": {
+                                        "flightPlaceId": "NYCA",
+                                        "displayCode": "NYC",
+                                        "name": "New York",
+                                        "type": "City"
+                                    },
+                                    "name": "New York John F. Kennedy",
+                                    "type": "Airport",
+                                    "country": "United States"
+                                },
+                                "destination": {
+                                    "flightPlaceId": "LHR",
+                                    "displayCode": "LHR",
+                                    "parent": {
+                                        "flightPlaceId": "LOND",
+                                        "displayCode": "LON",
+                                        "name": "London",
+                                        "type": "City"
+                                    },
+                                    "name": "London Heathrow",
+                                    "type": "Airport",
+                                    "country": "United Kingdom"
+                                },
+                                "departure": "2025-02-12T20:05:00",
+                                "arrival": "2025-02-13T08:10:00",
+                                "durationInMinutes": 425,
+                                "flightNumber": "116",
+                                "marketingCarrier": {
+                                    "id": -32480,
+                                    "name": "British Airways",
+                                    "alternateId": "BA",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                },
+                                "operatingCarrier": {
+                                    "id": -32480,
+                                    "name": "British Airways",
+                                    "alternateId": "BA",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                }
+                            },
+                            {
+                                "id": "13554-11182-2502131235-2502132340--32480",
+                                "origin": {
+                                    "flightPlaceId": "LHR",
+                                    "displayCode": "LHR",
+                                    "parent": {
+                                        "flightPlaceId": "LOND",
+                                        "displayCode": "LON",
+                                        "name": "London",
+                                        "type": "City"
+                                    },
+                                    "name": "London Heathrow",
+                                    "type": "Airport",
+                                    "country": "United Kingdom"
+                                },
+                                "destination": {
+                                    "flightPlaceId": "DXB",
+                                    "displayCode": "DXB",
+                                    "parent": {
+                                        "flightPlaceId": "DXBA",
+                                        "displayCode": "DXB",
+                                        "name": "Dubai",
+                                        "type": "City"
+                                    },
+                                    "name": "Dubai",
+                                    "type": "Airport",
+                                    "country": "United Arab Emirates"
+                                },
+                                "departure": "2025-02-13T12:35:00",
+                                "arrival": "2025-02-13T23:40:00",
+                                "durationInMinutes": 425,
+                                "flightNumber": "107",
+                                "marketingCarrier": {
+                                    "id": -32480,
+                                    "name": "British Airways",
+                                    "alternateId": "BA",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                },
+                                "operatingCarrier": {
+                                    "id": -32480,
+                                    "name": "British Airways",
+                                    "alternateId": "BA",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "isSelfTransfer": false,
+                "isProtectedSelfTransfer": false,
+                "farePolicy": {
+                    "isChangeAllowed": false,
+                    "isPartiallyChangeable": false,
+                    "isCancellationAllowed": false,
+                    "isPartiallyRefundable": false
+                },
+                "fareAttributes": {},
+                "tags": [
+                    "cheapest"
+                ],
+                "isMashUp": false,
+                "hasFlexibleOptions": false,
+                "score": 0.781464
+            },
+            {
+                "id": "11182-2502070215--32480-1-12712-2502071140|12712-2502121915--32480-1-11182-2502132340",
+                "price": {
+                    "raw": 936.11,
+                    "formatted": "$937",
+                    "pricingOptionId": "pdNa0-yWqoJS"
+                },
+                "legs": [
+                    {
+                        "id": "11182-2502070215--32480-1-12712-2502071140",
+                        "origin": {
+                            "id": "DXB",
+                            "entityId": "95673506",
+                            "name": "Dubai",
+                            "displayCode": "DXB",
+                            "city": "Dubai",
+                            "country": "United Arab Emirates",
+                            "isHighlighted": false
+                        },
+                        "destination": {
+                            "id": "JFK",
+                            "entityId": "95565058",
+                            "name": "New York John F. Kennedy",
+                            "displayCode": "JFK",
+                            "city": "New York",
+                            "country": "United States",
+                            "isHighlighted": false
+                        },
+                        "durationInMinutes": 1105,
+                        "stopCount": 1,
+                        "isSmallestStops": false,
+                        "departure": "2025-02-07T02:15:00",
+                        "arrival": "2025-02-07T11:40:00",
+                        "timeDeltaInDays": 0,
+                        "carriers": {
+                            "marketing": [
+                                {
+                                    "id": -32480,
+                                    "alternateId": "BA",
+                                    "logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/BA.png",
+                                    "name": "British Airways"
+                                }
+                            ],
+                            "operating": [
+                                {
+                                    "id": -32573,
+                                    "alternateId": "AA",
+                                    "logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/AA.png",
+                                    "name": "American Airlines"
+                                }
+                            ],
+                            "operationType": "partially_operated"
+                        },
+                        "segments": [
+                            {
+                                "id": "11182-13554-2502070215-2502070625--32480",
+                                "origin": {
+                                    "flightPlaceId": "DXB",
+                                    "displayCode": "DXB",
+                                    "parent": {
+                                        "flightPlaceId": "DXBA",
+                                        "displayCode": "DXB",
+                                        "name": "Dubai",
+                                        "type": "City"
+                                    },
+                                    "name": "Dubai",
+                                    "type": "Airport",
+                                    "country": "United Arab Emirates"
+                                },
+                                "destination": {
+                                    "flightPlaceId": "LHR",
+                                    "displayCode": "LHR",
+                                    "parent": {
+                                        "flightPlaceId": "LOND",
+                                        "displayCode": "LON",
+                                        "name": "London",
+                                        "type": "City"
+                                    },
+                                    "name": "London Heathrow",
+                                    "type": "Airport",
+                                    "country": "United Kingdom"
+                                },
+                                "departure": "2025-02-07T02:15:00",
+                                "arrival": "2025-02-07T06:25:00",
+                                "durationInMinutes": 490,
+                                "flightNumber": "106",
+                                "marketingCarrier": {
+                                    "id": -32480,
+                                    "name": "British Airways",
+                                    "alternateId": "BA",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                },
+                                "operatingCarrier": {
+                                    "id": -32480,
+                                    "name": "British Airways",
+                                    "alternateId": "BA",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                }
+                            },
+                            {
+                                "id": "13554-12712-2502070840-2502071140--32480",
+                                "origin": {
+                                    "flightPlaceId": "LHR",
+                                    "displayCode": "LHR",
+                                    "parent": {
+                                        "flightPlaceId": "LOND",
+                                        "displayCode": "LON",
+                                        "name": "London",
+                                        "type": "City"
+                                    },
+                                    "name": "London Heathrow",
+                                    "type": "Airport",
+                                    "country": "United Kingdom"
+                                },
+                                "destination": {
+                                    "flightPlaceId": "JFK",
+                                    "displayCode": "JFK",
+                                    "parent": {
+                                        "flightPlaceId": "NYCA",
+                                        "displayCode": "NYC",
+                                        "name": "New York",
+                                        "type": "City"
+                                    },
+                                    "name": "New York John F. Kennedy",
+                                    "type": "Airport",
+                                    "country": "United States"
+                                },
+                                "departure": "2025-02-07T08:40:00",
+                                "arrival": "2025-02-07T11:40:00",
+                                "durationInMinutes": 480,
+                                "flightNumber": "1516",
+                                "marketingCarrier": {
+                                    "id": -32480,
+                                    "name": "British Airways",
+                                    "alternateId": "BA",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                },
+                                "operatingCarrier": {
+                                    "id": -32573,
+                                    "name": "American Airlines",
+                                    "alternateId": "AA",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "id": "12712-2502121915--32480-1-11182-2502132340",
+                        "origin": {
+                            "id": "JFK",
+                            "entityId": "95565058",
+                            "name": "New York John F. Kennedy",
+                            "displayCode": "JFK",
+                            "city": "New York",
+                            "country": "United States",
+                            "isHighlighted": false
+                        },
+                        "destination": {
+                            "id": "DXB",
+                            "entityId": "95673506",
+                            "name": "Dubai",
+                            "displayCode": "DXB",
+                            "city": "Dubai",
+                            "country": "United Arab Emirates",
+                            "isHighlighted": false
+                        },
+                        "durationInMinutes": 1165,
+                        "stopCount": 1,
+                        "isSmallestStops": false,
+                        "departure": "2025-02-12T19:15:00",
+                        "arrival": "2025-02-13T23:40:00",
+                        "timeDeltaInDays": 1,
+                        "carriers": {
+                            "marketing": [
+                                {
+                                    "id": -32480,
+                                    "alternateId": "BA",
+                                    "logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/BA.png",
+                                    "name": "British Airways"
+                                }
+                            ],
+                            "operationType": "fully_operated"
+                        },
+                        "segments": [
+                            {
+                                "id": "12712-13554-2502121915-2502130710--32480",
+                                "origin": {
+                                    "flightPlaceId": "JFK",
+                                    "displayCode": "JFK",
+                                    "parent": {
+                                        "flightPlaceId": "NYCA",
+                                        "displayCode": "NYC",
+                                        "name": "New York",
+                                        "type": "City"
+                                    },
+                                    "name": "New York John F. Kennedy",
+                                    "type": "Airport",
+                                    "country": "United States"
+                                },
+                                "destination": {
+                                    "flightPlaceId": "LHR",
+                                    "displayCode": "LHR",
+                                    "parent": {
+                                        "flightPlaceId": "LOND",
+                                        "displayCode": "LON",
+                                        "name": "London",
+                                        "type": "City"
+                                    },
+                                    "name": "London Heathrow",
+                                    "type": "Airport",
+                                    "country": "United Kingdom"
+                                },
+                                "departure": "2025-02-12T19:15:00",
+                                "arrival": "2025-02-13T07:10:00",
+                                "durationInMinutes": 415,
+                                "flightNumber": "176",
+                                "marketingCarrier": {
+                                    "id": -32480,
+                                    "name": "British Airways",
+                                    "alternateId": "BA",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                },
+                                "operatingCarrier": {
+                                    "id": -32480,
+                                    "name": "British Airways",
+                                    "alternateId": "BA",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                }
+                            },
+                            {
+                                "id": "13554-11182-2502131235-2502132340--32480",
+                                "origin": {
+                                    "flightPlaceId": "LHR",
+                                    "displayCode": "LHR",
+                                    "parent": {
+                                        "flightPlaceId": "LOND",
+                                        "displayCode": "LON",
+                                        "name": "London",
+                                        "type": "City"
+                                    },
+                                    "name": "London Heathrow",
+                                    "type": "Airport",
+                                    "country": "United Kingdom"
+                                },
+                                "destination": {
+                                    "flightPlaceId": "DXB",
+                                    "displayCode": "DXB",
+                                    "parent": {
+                                        "flightPlaceId": "DXBA",
+                                        "displayCode": "DXB",
+                                        "name": "Dubai",
+                                        "type": "City"
+                                    },
+                                    "name": "Dubai",
+                                    "type": "Airport",
+                                    "country": "United Arab Emirates"
+                                },
+                                "departure": "2025-02-13T12:35:00",
+                                "arrival": "2025-02-13T23:40:00",
+                                "durationInMinutes": 425,
+                                "flightNumber": "107",
+                                "marketingCarrier": {
+                                    "id": -32480,
+                                    "name": "British Airways",
+                                    "alternateId": "BA",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                },
+                                "operatingCarrier": {
+                                    "id": -32480,
+                                    "name": "British Airways",
+                                    "alternateId": "BA",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "isSelfTransfer": false,
+                "isProtectedSelfTransfer": false,
+                "farePolicy": {
+                    "isChangeAllowed": false,
+                    "isPartiallyChangeable": false,
+                    "isCancellationAllowed": false,
+                    "isPartiallyRefundable": false
+                },
+                "fareAttributes": {},
+                "tags": [
+                    "third_cheapest"
+                ],
+                "isMashUp": false,
+                "hasFlexibleOptions": false,
+                "score": 0.76269
+            },
+            {
+                "id": "11182-2502070235--32348-0-12712-2502070815|12712-2502122300--32348-0-11182-2502132025",
+                "price": {
+                    "raw": 1419.97,
+                    "formatted": "$1,420",
+                    "pricingOptionId": "z--9hQ5TiSvW"
+                },
+                "legs": [
+                    {
+                        "id": "11182-2502070235--32348-0-12712-2502070815",
+                        "origin": {
+                            "id": "DXB",
+                            "entityId": "95673506",
+                            "name": "Dubai",
+                            "displayCode": "DXB",
+                            "city": "Dubai",
+                            "country": "United Arab Emirates",
+                            "isHighlighted": false
+                        },
+                        "destination": {
+                            "id": "JFK",
+                            "entityId": "95565058",
+                            "name": "New York John F. Kennedy",
+                            "displayCode": "JFK",
+                            "city": "New York",
+                            "country": "United States",
+                            "isHighlighted": false
+                        },
+                        "durationInMinutes": 880,
+                        "stopCount": 0,
+                        "isSmallestStops": false,
+                        "departure": "2025-02-07T02:35:00",
+                        "arrival": "2025-02-07T08:15:00",
+                        "timeDeltaInDays": 0,
+                        "carriers": {
+                            "marketing": [
+                                {
+                                    "id": -32348,
+                                    "alternateId": "EK",
+                                    "logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/EK.png",
+                                    "name": "Emirates"
+                                }
+                            ],
+                            "operationType": "fully_operated"
+                        },
+                        "segments": [
+                            {
+                                "id": "11182-12712-2502070235-2502070815--32348",
+                                "origin": {
+                                    "flightPlaceId": "DXB",
+                                    "displayCode": "DXB",
+                                    "parent": {
+                                        "flightPlaceId": "DXBA",
+                                        "displayCode": "DXB",
+                                        "name": "Dubai",
+                                        "type": "City"
+                                    },
+                                    "name": "Dubai",
+                                    "type": "Airport",
+                                    "country": "United Arab Emirates"
+                                },
+                                "destination": {
+                                    "flightPlaceId": "JFK",
+                                    "displayCode": "JFK",
+                                    "parent": {
+                                        "flightPlaceId": "NYCA",
+                                        "displayCode": "NYC",
+                                        "name": "New York",
+                                        "type": "City"
+                                    },
+                                    "name": "New York John F. Kennedy",
+                                    "type": "Airport",
+                                    "country": "United States"
+                                },
+                                "departure": "2025-02-07T02:35:00",
+                                "arrival": "2025-02-07T08:15:00",
+                                "durationInMinutes": 880,
+                                "flightNumber": "203",
+                                "marketingCarrier": {
+                                    "id": -32348,
+                                    "name": "Emirates",
+                                    "alternateId": "EK",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                },
+                                "operatingCarrier": {
+                                    "id": -32348,
+                                    "name": "Emirates",
+                                    "alternateId": "EK",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "id": "12712-2502122300--32348-0-11182-2502132025",
+                        "origin": {
+                            "id": "JFK",
+                            "entityId": "95565058",
+                            "name": "New York John F. Kennedy",
+                            "displayCode": "JFK",
+                            "city": "New York",
+                            "country": "United States",
+                            "isHighlighted": false
+                        },
+                        "destination": {
+                            "id": "DXB",
+                            "entityId": "95673506",
+                            "name": "Dubai",
+                            "displayCode": "DXB",
+                            "city": "Dubai",
+                            "country": "United Arab Emirates",
+                            "isHighlighted": false
+                        },
+                        "durationInMinutes": 745,
+                        "stopCount": 0,
+                        "isSmallestStops": false,
+                        "departure": "2025-02-12T23:00:00",
+                        "arrival": "2025-02-13T20:25:00",
+                        "timeDeltaInDays": 1,
+                        "carriers": {
+                            "marketing": [
+                                {
+                                    "id": -32348,
+                                    "alternateId": "EK",
+                                    "logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/EK.png",
+                                    "name": "Emirates"
+                                }
+                            ],
+                            "operationType": "fully_operated"
+                        },
+                        "segments": [
+                            {
+                                "id": "12712-11182-2502122300-2502132025--32348",
+                                "origin": {
+                                    "flightPlaceId": "JFK",
+                                    "displayCode": "JFK",
+                                    "parent": {
+                                        "flightPlaceId": "NYCA",
+                                        "displayCode": "NYC",
+                                        "name": "New York",
+                                        "type": "City"
+                                    },
+                                    "name": "New York John F. Kennedy",
+                                    "type": "Airport",
+                                    "country": "United States"
+                                },
+                                "destination": {
+                                    "flightPlaceId": "DXB",
+                                    "displayCode": "DXB",
+                                    "parent": {
+                                        "flightPlaceId": "DXBA",
+                                        "displayCode": "DXB",
+                                        "name": "Dubai",
+                                        "type": "City"
+                                    },
+                                    "name": "Dubai",
+                                    "type": "Airport",
+                                    "country": "United Arab Emirates"
+                                },
+                                "departure": "2025-02-12T23:00:00",
+                                "arrival": "2025-02-13T20:25:00",
+                                "durationInMinutes": 745,
+                                "flightNumber": "202",
+                                "marketingCarrier": {
+                                    "id": -32348,
+                                    "name": "Emirates",
+                                    "alternateId": "EK",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                },
+                                "operatingCarrier": {
+                                    "id": -32348,
+                                    "name": "Emirates",
+                                    "alternateId": "EK",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "isSelfTransfer": false,
+                "isProtectedSelfTransfer": false,
+                "farePolicy": {
+                    "isChangeAllowed": false,
+                    "isPartiallyChangeable": false,
+                    "isCancellationAllowed": false,
+                    "isPartiallyRefundable": false
+                },
+                "fareAttributes": {},
+                "tags": [
+                    "third_shortest"
+                ],
+                "isMashUp": false,
+                "hasFlexibleOptions": false,
+                "score": 0.757802
+            },
+            {
+                "id": "11182-2502071000--32480-1-12712-2502072010|12712-2502122005--32480-1-11182-2502132340",
+                "price": {
+                    "raw": 936.11,
+                    "formatted": "$937",
+                    "pricingOptionId": "UvDNK53NpR3q"
+                },
+                "legs": [
+                    {
+                        "id": "11182-2502071000--32480-1-12712-2502072010",
+                        "origin": {
+                            "id": "DXB",
+                            "entityId": "95673506",
+                            "name": "Dubai",
+                            "displayCode": "DXB",
+                            "city": "Dubai",
+                            "country": "United Arab Emirates",
+                            "isHighlighted": false
+                        },
+                        "destination": {
+                            "id": "JFK",
+                            "entityId": "95565058",
+                            "name": "New York John F. Kennedy",
+                            "displayCode": "JFK",
+                            "city": "New York",
+                            "country": "United States",
+                            "isHighlighted": false
+                        },
+                        "durationInMinutes": 1150,
+                        "stopCount": 1,
+                        "isSmallestStops": false,
+                        "departure": "2025-02-07T10:00:00",
+                        "arrival": "2025-02-07T20:10:00",
+                        "timeDeltaInDays": 0,
+                        "carriers": {
+                            "marketing": [
+                                {
+                                    "id": -32480,
+                                    "alternateId": "BA",
+                                    "logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/BA.png",
+                                    "name": "British Airways"
+                                }
+                            ],
+                            "operating": [
+                                {
+                                    "id": -32573,
+                                    "alternateId": "AA",
+                                    "logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/AA.png",
+                                    "name": "American Airlines"
+                                }
+                            ],
+                            "operationType": "partially_operated"
+                        },
+                        "segments": [
+                            {
+                                "id": "11182-13554-2502071000-2502071415--32480",
+                                "origin": {
+                                    "flightPlaceId": "DXB",
+                                    "displayCode": "DXB",
+                                    "parent": {
+                                        "flightPlaceId": "DXBA",
+                                        "displayCode": "DXB",
+                                        "name": "Dubai",
+                                        "type": "City"
+                                    },
+                                    "name": "Dubai",
+                                    "type": "Airport",
+                                    "country": "United Arab Emirates"
+                                },
+                                "destination": {
+                                    "flightPlaceId": "LHR",
+                                    "displayCode": "LHR",
+                                    "parent": {
+                                        "flightPlaceId": "LOND",
+                                        "displayCode": "LON",
+                                        "name": "London",
+                                        "type": "City"
+                                    },
+                                    "name": "London Heathrow",
+                                    "type": "Airport",
+                                    "country": "United Kingdom"
+                                },
+                                "departure": "2025-02-07T10:00:00",
+                                "arrival": "2025-02-07T14:15:00",
+                                "durationInMinutes": 495,
+                                "flightNumber": "104",
+                                "marketingCarrier": {
+                                    "id": -32480,
+                                    "name": "British Airways",
+                                    "alternateId": "BA",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                },
+                                "operatingCarrier": {
+                                    "id": -32480,
+                                    "name": "British Airways",
+                                    "alternateId": "BA",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                }
+                            },
+                            {
+                                "id": "13554-12712-2502071705-2502072010--32480",
+                                "origin": {
+                                    "flightPlaceId": "LHR",
+                                    "displayCode": "LHR",
+                                    "parent": {
+                                        "flightPlaceId": "LOND",
+                                        "displayCode": "LON",
+                                        "name": "London",
+                                        "type": "City"
+                                    },
+                                    "name": "London Heathrow",
+                                    "type": "Airport",
+                                    "country": "United Kingdom"
+                                },
+                                "destination": {
+                                    "flightPlaceId": "JFK",
+                                    "displayCode": "JFK",
+                                    "parent": {
+                                        "flightPlaceId": "NYCA",
+                                        "displayCode": "NYC",
+                                        "name": "New York",
+                                        "type": "City"
+                                    },
+                                    "name": "New York John F. Kennedy",
+                                    "type": "Airport",
+                                    "country": "United States"
+                                },
+                                "departure": "2025-02-07T17:05:00",
+                                "arrival": "2025-02-07T20:10:00",
+                                "durationInMinutes": 485,
+                                "flightNumber": "1510",
+                                "marketingCarrier": {
+                                    "id": -32480,
+                                    "name": "British Airways",
+                                    "alternateId": "BA",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                },
+                                "operatingCarrier": {
+                                    "id": -32573,
+                                    "name": "American Airlines",
+                                    "alternateId": "AA",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "id": "12712-2502122005--32480-1-11182-2502132340",
+                        "origin": {
+                            "id": "JFK",
+                            "entityId": "95565058",
+                            "name": "New York John F. Kennedy",
+                            "displayCode": "JFK",
+                            "city": "New York",
+                            "country": "United States",
+                            "isHighlighted": false
+                        },
+                        "destination": {
+                            "id": "DXB",
+                            "entityId": "95673506",
+                            "name": "Dubai",
+                            "displayCode": "DXB",
+                            "city": "Dubai",
+                            "country": "United Arab Emirates",
+                            "isHighlighted": false
+                        },
+                        "durationInMinutes": 1115,
+                        "stopCount": 1,
+                        "isSmallestStops": false,
+                        "departure": "2025-02-12T20:05:00",
+                        "arrival": "2025-02-13T23:40:00",
+                        "timeDeltaInDays": 1,
+                        "carriers": {
+                            "marketing": [
+                                {
+                                    "id": -32480,
+                                    "alternateId": "BA",
+                                    "logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/BA.png",
+                                    "name": "British Airways"
+                                }
+                            ],
+                            "operationType": "fully_operated"
+                        },
+                        "segments": [
+                            {
+                                "id": "12712-13554-2502122005-2502130810--32480",
+                                "origin": {
+                                    "flightPlaceId": "JFK",
+                                    "displayCode": "JFK",
+                                    "parent": {
+                                        "flightPlaceId": "NYCA",
+                                        "displayCode": "NYC",
+                                        "name": "New York",
+                                        "type": "City"
+                                    },
+                                    "name": "New York John F. Kennedy",
+                                    "type": "Airport",
+                                    "country": "United States"
+                                },
+                                "destination": {
+                                    "flightPlaceId": "LHR",
+                                    "displayCode": "LHR",
+                                    "parent": {
+                                        "flightPlaceId": "LOND",
+                                        "displayCode": "LON",
+                                        "name": "London",
+                                        "type": "City"
+                                    },
+                                    "name": "London Heathrow",
+                                    "type": "Airport",
+                                    "country": "United Kingdom"
+                                },
+                                "departure": "2025-02-12T20:05:00",
+                                "arrival": "2025-02-13T08:10:00",
+                                "durationInMinutes": 425,
+                                "flightNumber": "116",
+                                "marketingCarrier": {
+                                    "id": -32480,
+                                    "name": "British Airways",
+                                    "alternateId": "BA",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                },
+                                "operatingCarrier": {
+                                    "id": -32480,
+                                    "name": "British Airways",
+                                    "alternateId": "BA",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                }
+                            },
+                            {
+                                "id": "13554-11182-2502131235-2502132340--32480",
+                                "origin": {
+                                    "flightPlaceId": "LHR",
+                                    "displayCode": "LHR",
+                                    "parent": {
+                                        "flightPlaceId": "LOND",
+                                        "displayCode": "LON",
+                                        "name": "London",
+                                        "type": "City"
+                                    },
+                                    "name": "London Heathrow",
+                                    "type": "Airport",
+                                    "country": "United Kingdom"
+                                },
+                                "destination": {
+                                    "flightPlaceId": "DXB",
+                                    "displayCode": "DXB",
+                                    "parent": {
+                                        "flightPlaceId": "DXBA",
+                                        "displayCode": "DXB",
+                                        "name": "Dubai",
+                                        "type": "City"
+                                    },
+                                    "name": "Dubai",
+                                    "type": "Airport",
+                                    "country": "United Arab Emirates"
+                                },
+                                "departure": "2025-02-13T12:35:00",
+                                "arrival": "2025-02-13T23:40:00",
+                                "durationInMinutes": 425,
+                                "flightNumber": "107",
+                                "marketingCarrier": {
+                                    "id": -32480,
+                                    "name": "British Airways",
+                                    "alternateId": "BA",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                },
+                                "operatingCarrier": {
+                                    "id": -32480,
+                                    "name": "British Airways",
+                                    "alternateId": "BA",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "isSelfTransfer": false,
+                "isProtectedSelfTransfer": false,
+                "farePolicy": {
+                    "isChangeAllowed": false,
+                    "isPartiallyChangeable": false,
+                    "isCancellationAllowed": false,
+                    "isPartiallyRefundable": false
+                },
+                "fareAttributes": {},
+                "tags": [
+                    "second_cheapest"
+                ],
+                "isMashUp": false,
+                "hasFlexibleOptions": false,
+                "score": 0.750392
+            },
+            {
+                "id": "11182-2502070215--32480-1-12712-2502071140|12712-2502121845--32480-1-11182-2502132340",
+                "price": {
+                    "raw": 936.11,
+                    "formatted": "$937",
+                    "pricingOptionId": "BXEm9lOtInht"
+                },
+                "legs": [
+                    {
+                        "id": "11182-2502070215--32480-1-12712-2502071140",
+                        "origin": {
+                            "id": "DXB",
+                            "entityId": "95673506",
+                            "name": "Dubai",
+                            "displayCode": "DXB",
+                            "city": "Dubai",
+                            "country": "United Arab Emirates",
+                            "isHighlighted": false
+                        },
+                        "destination": {
+                            "id": "JFK",
+                            "entityId": "95565058",
+                            "name": "New York John F. Kennedy",
+                            "displayCode": "JFK",
+                            "city": "New York",
+                            "country": "United States",
+                            "isHighlighted": false
+                        },
+                        "durationInMinutes": 1105,
+                        "stopCount": 1,
+                        "isSmallestStops": false,
+                        "departure": "2025-02-07T02:15:00",
+                        "arrival": "2025-02-07T11:40:00",
+                        "timeDeltaInDays": 0,
+                        "carriers": {
+                            "marketing": [
+                                {
+                                    "id": -32480,
+                                    "alternateId": "BA",
+                                    "logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/BA.png",
+                                    "name": "British Airways"
+                                }
+                            ],
+                            "operating": [
+                                {
+                                    "id": -32573,
+                                    "alternateId": "AA",
+                                    "logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/AA.png",
+                                    "name": "American Airlines"
+                                }
+                            ],
+                            "operationType": "partially_operated"
+                        },
+                        "segments": [
+                            {
+                                "id": "11182-13554-2502070215-2502070625--32480",
+                                "origin": {
+                                    "flightPlaceId": "DXB",
+                                    "displayCode": "DXB",
+                                    "parent": {
+                                        "flightPlaceId": "DXBA",
+                                        "displayCode": "DXB",
+                                        "name": "Dubai",
+                                        "type": "City"
+                                    },
+                                    "name": "Dubai",
+                                    "type": "Airport",
+                                    "country": "United Arab Emirates"
+                                },
+                                "destination": {
+                                    "flightPlaceId": "LHR",
+                                    "displayCode": "LHR",
+                                    "parent": {
+                                        "flightPlaceId": "LOND",
+                                        "displayCode": "LON",
+                                        "name": "London",
+                                        "type": "City"
+                                    },
+                                    "name": "London Heathrow",
+                                    "type": "Airport",
+                                    "country": "United Kingdom"
+                                },
+                                "departure": "2025-02-07T02:15:00",
+                                "arrival": "2025-02-07T06:25:00",
+                                "durationInMinutes": 490,
+                                "flightNumber": "106",
+                                "marketingCarrier": {
+                                    "id": -32480,
+                                    "name": "British Airways",
+                                    "alternateId": "BA",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                },
+                                "operatingCarrier": {
+                                    "id": -32480,
+                                    "name": "British Airways",
+                                    "alternateId": "BA",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                }
+                            },
+                            {
+                                "id": "13554-12712-2502070840-2502071140--32480",
+                                "origin": {
+                                    "flightPlaceId": "LHR",
+                                    "displayCode": "LHR",
+                                    "parent": {
+                                        "flightPlaceId": "LOND",
+                                        "displayCode": "LON",
+                                        "name": "London",
+                                        "type": "City"
+                                    },
+                                    "name": "London Heathrow",
+                                    "type": "Airport",
+                                    "country": "United Kingdom"
+                                },
+                                "destination": {
+                                    "flightPlaceId": "JFK",
+                                    "displayCode": "JFK",
+                                    "parent": {
+                                        "flightPlaceId": "NYCA",
+                                        "displayCode": "NYC",
+                                        "name": "New York",
+                                        "type": "City"
+                                    },
+                                    "name": "New York John F. Kennedy",
+                                    "type": "Airport",
+                                    "country": "United States"
+                                },
+                                "departure": "2025-02-07T08:40:00",
+                                "arrival": "2025-02-07T11:40:00",
+                                "durationInMinutes": 480,
+                                "flightNumber": "1516",
+                                "marketingCarrier": {
+                                    "id": -32480,
+                                    "name": "British Airways",
+                                    "alternateId": "BA",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                },
+                                "operatingCarrier": {
+                                    "id": -32573,
+                                    "name": "American Airlines",
+                                    "alternateId": "AA",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "id": "12712-2502121845--32480-1-11182-2502132340",
+                        "origin": {
+                            "id": "JFK",
+                            "entityId": "95565058",
+                            "name": "New York John F. Kennedy",
+                            "displayCode": "JFK",
+                            "city": "New York",
+                            "country": "United States",
+                            "isHighlighted": false
+                        },
+                        "destination": {
+                            "id": "DXB",
+                            "entityId": "95673506",
+                            "name": "Dubai",
+                            "displayCode": "DXB",
+                            "city": "Dubai",
+                            "country": "United Arab Emirates",
+                            "isHighlighted": false
+                        },
+                        "durationInMinutes": 1195,
+                        "stopCount": 1,
+                        "isSmallestStops": false,
+                        "departure": "2025-02-12T18:45:00",
+                        "arrival": "2025-02-13T23:40:00",
+                        "timeDeltaInDays": 1,
+                        "carriers": {
+                            "marketing": [
+                                {
+                                    "id": -32480,
+                                    "alternateId": "BA",
+                                    "logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/BA.png",
+                                    "name": "British Airways"
+                                }
+                            ],
+                            "operationType": "fully_operated"
+                        },
+                        "segments": [
+                            {
+                                "id": "12712-13554-2502121845-2502130645--32480",
+                                "origin": {
+                                    "flightPlaceId": "JFK",
+                                    "displayCode": "JFK",
+                                    "parent": {
+                                        "flightPlaceId": "NYCA",
+                                        "displayCode": "NYC",
+                                        "name": "New York",
+                                        "type": "City"
+                                    },
+                                    "name": "New York John F. Kennedy",
+                                    "type": "Airport",
+                                    "country": "United States"
+                                },
+                                "destination": {
+                                    "flightPlaceId": "LHR",
+                                    "displayCode": "LHR",
+                                    "parent": {
+                                        "flightPlaceId": "LOND",
+                                        "displayCode": "LON",
+                                        "name": "London",
+                                        "type": "City"
+                                    },
+                                    "name": "London Heathrow",
+                                    "type": "Airport",
+                                    "country": "United Kingdom"
+                                },
+                                "departure": "2025-02-12T18:45:00",
+                                "arrival": "2025-02-13T06:45:00",
+                                "durationInMinutes": 420,
+                                "flightNumber": "174",
+                                "marketingCarrier": {
+                                    "id": -32480,
+                                    "name": "British Airways",
+                                    "alternateId": "BA",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                },
+                                "operatingCarrier": {
+                                    "id": -32480,
+                                    "name": "British Airways",
+                                    "alternateId": "BA",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                }
+                            },
+                            {
+                                "id": "13554-11182-2502131235-2502132340--32480",
+                                "origin": {
+                                    "flightPlaceId": "LHR",
+                                    "displayCode": "LHR",
+                                    "parent": {
+                                        "flightPlaceId": "LOND",
+                                        "displayCode": "LON",
+                                        "name": "London",
+                                        "type": "City"
+                                    },
+                                    "name": "London Heathrow",
+                                    "type": "Airport",
+                                    "country": "United Kingdom"
+                                },
+                                "destination": {
+                                    "flightPlaceId": "DXB",
+                                    "displayCode": "DXB",
+                                    "parent": {
+                                        "flightPlaceId": "DXBA",
+                                        "displayCode": "DXB",
+                                        "name": "Dubai",
+                                        "type": "City"
+                                    },
+                                    "name": "Dubai",
+                                    "type": "Airport",
+                                    "country": "United Arab Emirates"
+                                },
+                                "departure": "2025-02-13T12:35:00",
+                                "arrival": "2025-02-13T23:40:00",
+                                "durationInMinutes": 425,
+                                "flightNumber": "107",
+                                "marketingCarrier": {
+                                    "id": -32480,
+                                    "name": "British Airways",
+                                    "alternateId": "BA",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                },
+                                "operatingCarrier": {
+                                    "id": -32480,
+                                    "name": "British Airways",
+                                    "alternateId": "BA",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "isSelfTransfer": false,
+                "isProtectedSelfTransfer": false,
+                "farePolicy": {
+                    "isChangeAllowed": false,
+                    "isPartiallyChangeable": false,
+                    "isCancellationAllowed": false,
+                    "isPartiallyRefundable": false
+                },
+                "fareAttributes": {},
+                "isMashUp": false,
+                "hasFlexibleOptions": false,
+                "score": 0.749624
+            },
+            {
+                "id": "11182-2502070215--32480-1-12712-2502071140|12712-2502121830--32480-1-11182-2502132340",
+                "price": {
+                    "raw": 936.11,
+                    "formatted": "$937",
+                    "pricingOptionId": "RQ54zuhsTk-O"
+                },
+                "legs": [
+                    {
+                        "id": "11182-2502070215--32480-1-12712-2502071140",
+                        "origin": {
+                            "id": "DXB",
+                            "entityId": "95673506",
+                            "name": "Dubai",
+                            "displayCode": "DXB",
+                            "city": "Dubai",
+                            "country": "United Arab Emirates",
+                            "isHighlighted": false
+                        },
+                        "destination": {
+                            "id": "JFK",
+                            "entityId": "95565058",
+                            "name": "New York John F. Kennedy",
+                            "displayCode": "JFK",
+                            "city": "New York",
+                            "country": "United States",
+                            "isHighlighted": false
+                        },
+                        "durationInMinutes": 1105,
+                        "stopCount": 1,
+                        "isSmallestStops": false,
+                        "departure": "2025-02-07T02:15:00",
+                        "arrival": "2025-02-07T11:40:00",
+                        "timeDeltaInDays": 0,
+                        "carriers": {
+                            "marketing": [
+                                {
+                                    "id": -32480,
+                                    "alternateId": "BA",
+                                    "logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/BA.png",
+                                    "name": "British Airways"
+                                }
+                            ],
+                            "operating": [
+                                {
+                                    "id": -32573,
+                                    "alternateId": "AA",
+                                    "logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/AA.png",
+                                    "name": "American Airlines"
+                                }
+                            ],
+                            "operationType": "partially_operated"
+                        },
+                        "segments": [
+                            {
+                                "id": "11182-13554-2502070215-2502070625--32480",
+                                "origin": {
+                                    "flightPlaceId": "DXB",
+                                    "displayCode": "DXB",
+                                    "parent": {
+                                        "flightPlaceId": "DXBA",
+                                        "displayCode": "DXB",
+                                        "name": "Dubai",
+                                        "type": "City"
+                                    },
+                                    "name": "Dubai",
+                                    "type": "Airport",
+                                    "country": "United Arab Emirates"
+                                },
+                                "destination": {
+                                    "flightPlaceId": "LHR",
+                                    "displayCode": "LHR",
+                                    "parent": {
+                                        "flightPlaceId": "LOND",
+                                        "displayCode": "LON",
+                                        "name": "London",
+                                        "type": "City"
+                                    },
+                                    "name": "London Heathrow",
+                                    "type": "Airport",
+                                    "country": "United Kingdom"
+                                },
+                                "departure": "2025-02-07T02:15:00",
+                                "arrival": "2025-02-07T06:25:00",
+                                "durationInMinutes": 490,
+                                "flightNumber": "106",
+                                "marketingCarrier": {
+                                    "id": -32480,
+                                    "name": "British Airways",
+                                    "alternateId": "BA",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                },
+                                "operatingCarrier": {
+                                    "id": -32480,
+                                    "name": "British Airways",
+                                    "alternateId": "BA",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                }
+                            },
+                            {
+                                "id": "13554-12712-2502070840-2502071140--32480",
+                                "origin": {
+                                    "flightPlaceId": "LHR",
+                                    "displayCode": "LHR",
+                                    "parent": {
+                                        "flightPlaceId": "LOND",
+                                        "displayCode": "LON",
+                                        "name": "London",
+                                        "type": "City"
+                                    },
+                                    "name": "London Heathrow",
+                                    "type": "Airport",
+                                    "country": "United Kingdom"
+                                },
+                                "destination": {
+                                    "flightPlaceId": "JFK",
+                                    "displayCode": "JFK",
+                                    "parent": {
+                                        "flightPlaceId": "NYCA",
+                                        "displayCode": "NYC",
+                                        "name": "New York",
+                                        "type": "City"
+                                    },
+                                    "name": "New York John F. Kennedy",
+                                    "type": "Airport",
+                                    "country": "United States"
+                                },
+                                "departure": "2025-02-07T08:40:00",
+                                "arrival": "2025-02-07T11:40:00",
+                                "durationInMinutes": 480,
+                                "flightNumber": "1516",
+                                "marketingCarrier": {
+                                    "id": -32480,
+                                    "name": "British Airways",
+                                    "alternateId": "BA",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                },
+                                "operatingCarrier": {
+                                    "id": -32573,
+                                    "name": "American Airlines",
+                                    "alternateId": "AA",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "id": "12712-2502121830--32480-1-11182-2502132340",
+                        "origin": {
+                            "id": "JFK",
+                            "entityId": "95565058",
+                            "name": "New York John F. Kennedy",
+                            "displayCode": "JFK",
+                            "city": "New York",
+                            "country": "United States",
+                            "isHighlighted": false
+                        },
+                        "destination": {
+                            "id": "DXB",
+                            "entityId": "95673506",
+                            "name": "Dubai",
+                            "displayCode": "DXB",
+                            "city": "Dubai",
+                            "country": "United Arab Emirates",
+                            "isHighlighted": false
+                        },
+                        "durationInMinutes": 1210,
+                        "stopCount": 1,
+                        "isSmallestStops": false,
+                        "departure": "2025-02-12T18:30:00",
+                        "arrival": "2025-02-13T23:40:00",
+                        "timeDeltaInDays": 1,
+                        "carriers": {
+                            "marketing": [
+                                {
+                                    "id": -32480,
+                                    "alternateId": "BA",
+                                    "logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/BA.png",
+                                    "name": "British Airways"
+                                }
+                            ],
+                            "operationType": "fully_operated"
+                        },
+                        "segments": [
+                            {
+                                "id": "12712-13554-2502121830-2502130630--32480",
+                                "origin": {
+                                    "flightPlaceId": "JFK",
+                                    "displayCode": "JFK",
+                                    "parent": {
+                                        "flightPlaceId": "NYCA",
+                                        "displayCode": "NYC",
+                                        "name": "New York",
+                                        "type": "City"
+                                    },
+                                    "name": "New York John F. Kennedy",
+                                    "type": "Airport",
+                                    "country": "United States"
+                                },
+                                "destination": {
+                                    "flightPlaceId": "LHR",
+                                    "displayCode": "LHR",
+                                    "parent": {
+                                        "flightPlaceId": "LOND",
+                                        "displayCode": "LON",
+                                        "name": "London",
+                                        "type": "City"
+                                    },
+                                    "name": "London Heathrow",
+                                    "type": "Airport",
+                                    "country": "United Kingdom"
+                                },
+                                "departure": "2025-02-12T18:30:00",
+                                "arrival": "2025-02-13T06:30:00",
+                                "durationInMinutes": 420,
+                                "flightNumber": "112",
+                                "marketingCarrier": {
+                                    "id": -32480,
+                                    "name": "British Airways",
+                                    "alternateId": "BA",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                },
+                                "operatingCarrier": {
+                                    "id": -32480,
+                                    "name": "British Airways",
+                                    "alternateId": "BA",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                }
+                            },
+                            {
+                                "id": "13554-11182-2502131235-2502132340--32480",
+                                "origin": {
+                                    "flightPlaceId": "LHR",
+                                    "displayCode": "LHR",
+                                    "parent": {
+                                        "flightPlaceId": "LOND",
+                                        "displayCode": "LON",
+                                        "name": "London",
+                                        "type": "City"
+                                    },
+                                    "name": "London Heathrow",
+                                    "type": "Airport",
+                                    "country": "United Kingdom"
+                                },
+                                "destination": {
+                                    "flightPlaceId": "DXB",
+                                    "displayCode": "DXB",
+                                    "parent": {
+                                        "flightPlaceId": "DXBA",
+                                        "displayCode": "DXB",
+                                        "name": "Dubai",
+                                        "type": "City"
+                                    },
+                                    "name": "Dubai",
+                                    "type": "Airport",
+                                    "country": "United Arab Emirates"
+                                },
+                                "departure": "2025-02-13T12:35:00",
+                                "arrival": "2025-02-13T23:40:00",
+                                "durationInMinutes": 425,
+                                "flightNumber": "107",
+                                "marketingCarrier": {
+                                    "id": -32480,
+                                    "name": "British Airways",
+                                    "alternateId": "BA",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                },
+                                "operatingCarrier": {
+                                    "id": -32480,
+                                    "name": "British Airways",
+                                    "alternateId": "BA",
+                                    "allianceId": 0,
+                                    "displayCode": ""
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "isSelfTransfer": false,
+                "isProtectedSelfTransfer": false,
+                "farePolicy": {
+                    "isChangeAllowed": false,
+                    "isPartiallyChangeable": false,
+                    "isCancellationAllowed": false,
+                    "isPartiallyRefundable": false
+                },
+                "fareAttributes": {},
+                "isMashUp": false,
+                "hasFlexibleOptions": false,
+                "score": 0.744874
+            }
+        ],
+        "messages": [],
+        "filterStats": {
+            "duration": {
+                "min": 865,
+                "max": 1210,
+                "multiCityMin": 1610,
+                "multiCityMax": 2315
+            },
+            "airports": [
+                {
+                    "city": "Dubai",
+                    "airports": [
+                        {
+                            "id": "DXB",
+                            "entityId": "95673506",
+                            "name": "Dubai"
+                        }
+                    ]
+                },
+                {
+                    "city": "New York",
+                    "airports": [
+                        {
+                            "id": "JFK",
+                            "entityId": "95565058",
+                            "name": "New York John F. Kennedy"
+                        },
+                        {
+                            "id": "EWR",
+                            "entityId": "95565059",
+                            "name": "New York Newark"
+                        }
+                    ]
+                }
+            ],
+            "carriers": [
+                {
+                    "id": -32480,
+                    "alternateId": "BA",
+                    "logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/BA.png",
+                    "name": "British Airways"
+                },
+                {
+                    "id": -32348,
+                    "alternateId": "EK",
+                    "logoUrl": "https://logos.skyscnr.com/images/airlines/favicon/EK.png",
+                    "name": "Emirates"
+                }
+            ],
+            "stopPrices": {
+                "direct": {
+                    "isPresent": true,
+                    "formattedPrice": "$1,240"
+                },
+                "one": {
+                    "isPresent": true,
+                    "formattedPrice": "$937"
+                },
+                "twoOrMore": {
+                    "isPresent": false
+                }
+            }
+        },
+        "flightsSessionId": "c376cdad-5a54-4067-a6ba-05d3c4ea0ea9",
+        "destinationImageUrl": "https://content.skyscnr.com/m/3719e8f4a5daf43d/original/Flights-Placeholder.jpg"
+    }
+}
