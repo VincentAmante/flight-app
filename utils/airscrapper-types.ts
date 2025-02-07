@@ -61,7 +61,7 @@ export interface Context {
 }
 
 export interface ItinerariesEntity {
-    id?: string;
+    id: string;
     price?: Price;
     legs?: (LegsEntity)[] | null;
     isSelfTransfer?: boolean;
