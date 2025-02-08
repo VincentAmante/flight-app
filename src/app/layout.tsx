@@ -8,6 +8,7 @@ import '@fontsource/roboto/700.css';
 import '@fontsource-variable/montserrat';
 import CustomThemeProvider from "../../components/providers/CustomThemeProvider";
 import AppHeader from "../../components/AppHeader";
+import '@fontsource-variable/dm-sans';
 
 export const metadata: Metadata = {
   title: "SkyTopper",

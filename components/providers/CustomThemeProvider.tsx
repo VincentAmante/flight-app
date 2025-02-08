@@ -4,6 +4,13 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import React from 'react';
 
 const theme = createTheme({
+    typography: {
+        fontFamily: [
+            'DM Sans Variable',
+            'Roboto',
+            'sans-serif'
+        ].join(', '),
+    },
     palette: {
         primary: {
             light: '#339999',

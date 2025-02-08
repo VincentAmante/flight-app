@@ -6,6 +6,7 @@ import {
     Grid2,
     Paper,
     Container,
+    Autocomplete,
 } from '@mui/material'
 
 import { Search as SearchIcon } from '@mui/icons-material'
@@ -22,6 +23,8 @@ import { useState } from 'react'
 interface SearchFormProps {
     onSubmit?: (data: QuerySchemaType) => void
 }
+
+const locationOptions = ['Dubai', 'Manila', 'London', 'New York', 'Tokyo']
 
 export default function SearchForm(props: SearchFormProps) {
     const {
@@ -50,21 +53,35 @@ export default function SearchForm(props: SearchFormProps) {
                         }}
                     >
                         <Grid2 size={1}>
-                            <TextField
-                                {...register('origin')}
-                                label="Origin" variant="outlined"
-                                error={!!errors.origin}
-                                helperText={errors.origin?.message || ''}
-                                fullWidth
+                            <Autocomplete
+                                freeSolo
+                                options={locationOptions}
+                                disableClearable
+                                renderInput={(params) => (
+                                    <TextField
+                                        {...params}
+                                        {...register('origin')}
+                                        label="Origin" variant="outlined"
+                                        error={!!errors.origin}
+                                        helperText={errors.origin?.message || ''}
+                                    />
+                                )}
                             />
                         </Grid2>
                         <Grid2 size={1}>
-                            <TextField
-                                {...register('destination')}
-                                label="Destination" variant="outlined"
-                                error={!!errors.destination}
-                                helperText={errors.destination?.message || ''}
-                                fullWidth
+                            <Autocomplete
+                                freeSolo
+                                options={locationOptions}
+                                disableClearable
+                                renderInput={(params) => (
+                                    <TextField
+                                        {...params}
+                                        {...register('destination')}
+                                        label="Destination" variant="outlined"
+                                        error={!!errors.destination}
+                                        helperText={errors.destination?.message || ''}
+                                    />
+                                )}
                             />
                         </Grid2>
                         <Grid2 size={1}>

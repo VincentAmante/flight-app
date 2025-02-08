@@ -22,7 +22,7 @@ function AppHeader() {
                     <Typography
                         variant="h5"
                         noWrap
-                        fontFamily='Montserrat'
+                        fontFamily='Montserrat Variable'
                         color='white' 
                         className='select-none'
                     >

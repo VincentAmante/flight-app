@@ -355,9 +355,9 @@ function SkeletonRows(props: { rows: number }) {
         <>
             {Array.from({ length: props.rows }).map((_, index) => {
                 return (
-                    <TableRow key={index}>
+                    <TableRow key={index} sx={{ py: 1 }}>
                         <TableCell colSpan={1}>
-                            <Skeleton variant='rectangular' animation='pulse' height={height} />
+                            <Skeleton variant='text' animation='pulse' height={height} />
                         </TableCell>
                         <TableCell colSpan={1}>
                             <Skeleton variant='text' animation='pulse' height={height} />
@@ -380,7 +380,7 @@ function SkeletonRows(props: { rows: number }) {
 function MinutesToHoursAndMins(props: { minutes: number }) {
     const minutes = props.minutes;
 
-    const hours = Math.floor(minutes % (24 * 60) / 60);
+    const hours = Math.floor(minutes / 60)
     const minutesLeft = Math.floor(minutes % 60);
     return <>
         {(hours) && <>{hours} hr </>}
@@ -400,10 +400,11 @@ function FormattedDate(props: { date: string }) {
 interface SortMenuProps {
     setOrder: (order: Order) => void;
     setOrderBy: (orderBy: OrderByType) => void;
+    selected: OrderByType;
 }
 
 function SortMenu(props: SortMenuProps) {
-    const { setOrder, setOrderBy } = props;
+    const { setOrder, setOrderBy, selected } = props;
 
     const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
     const open = Boolean(anchorEl);
@@ -430,8 +431,8 @@ function SortMenu(props: SortMenuProps) {
                     'aria-labelledby': 'basic-button',
                 }}
             >
-                <MenuItem onClick={() => { setOrderBy('price'); setOrder('asc'); handleClose() }}>Cheapest</MenuItem>
-                <MenuItem onClick={() => { setOrderBy('duration'); setOrder('asc'); handleClose() }}>Fastest</MenuItem>
+                <MenuItem selected={selected === 'price'} onClick={() => { setOrderBy('price'); setOrder('asc'); handleClose() }}>Cheapest</MenuItem>
+                <MenuItem selected={selected === 'duration'} onClick={() => { setOrderBy('duration'); setOrder('asc'); handleClose() }}>Fastest</MenuItem>
             </Menu>
         </div>
     );
@@ -479,7 +480,7 @@ function FilterMenu(props: FilterMenuProps) {
 function TableToolbar(props: { children?: React.ReactNode }) {
     const { children } = props;
     return <Toolbar>
-        <Stack direction="row" spacing={2} justifyContent='space-between' sx={{ width: '100%' }}>
+        <Stack direction="row" spacing={2} justifyContent='space-between' sx={{ pt: 1, width: '100%' }}>
             <Typography variant="h5">
                 Flights
             </Typography>
@@ -514,6 +515,8 @@ export default function FlightsDisplay(props: FlightsDisplayProps) {
 
     // Load sort and filter from local storage on mount
     useMemo(() => {
+        if (typeof localStorage === 'undefined') return
+
         if (!localStorage.getItem('sort')) return;
         const sortData = JSON.parse(localStorage.getItem('sort') || '{}');
         setOrder(sortData.order ?? 'asc');
@@ -535,11 +538,6 @@ export default function FlightsDisplay(props: FlightsDisplayProps) {
             filterByPrice, filterByDepartureDuration, maxPrice, maxDepartureDurationHours
         }));
     }, [order, orderBy, filterByPrice, filterByDepartureDuration, maxPrice, maxDepartureDurationHours]);
-
-
-
-
-
 
     const handleChangePage = (_e: unknown, newPage: number) => {
         setPage(newPage);
@@ -582,6 +580,7 @@ export default function FlightsDisplay(props: FlightsDisplayProps) {
                 <SortMenu
                     setOrder={setOrder}
                     setOrderBy={setOrderBy}
+                    selected={orderBy}
                 />
                 <FilterMenu>
                     <Box sx={{ p: 1 }}>
@@ -646,7 +645,8 @@ export default function FlightsDisplay(props: FlightsDisplayProps) {
                         {(filteredRows.length === 0) && <TableRow>
                             <TableCell colSpan={4} align="center" sx={{ py: 4 }}>
                                 <Typography variant='h6' fontWeight='light' color={'text.secondary'}>
-                                    {(hasNoFlightsFound || (itineraries.length > 0) ? 'No flights found' : 'Awaiting your search!')}
+                                    {(hasNoFlightsFound || (itineraries.length > 0) ? 'No flights found'
+                                        : (!isLoading) ? 'Awaiting your search!' : '')}
                                 </Typography>
                             </TableCell>
                         </TableRow>}
@@ -665,6 +665,3 @@ export default function FlightsDisplay(props: FlightsDisplayProps) {
         </Paper>
     );
 }
-
-
-

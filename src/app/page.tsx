@@ -19,7 +19,7 @@ export default function Home() {
     async function fetchFlights() {
       if (search){
         setIsLoading(true);
-        await getFlightsMock(search).then((res) => {
+        await getFlights(search).then((res) => {
           if (res.flights && res.flights.itineraries){
             setItineraries(res.flights.itineraries)
             if (res.flights.itineraries.length === 0){
@@ -28,7 +28,7 @@ export default function Home() {
               setNoFlightsFound(false);
             }
           }
-        }).then(() => setIsLoading(false));
+        }).finally(() => setIsLoading(false));
       }
     }
 
@@ -36,7 +36,10 @@ export default function Home() {
   }, [search])
 
   return (
-    <Container sx={{ py: 2 }}>
+    <Container sx={{ py: 2, px: {
+      xs: 1,
+      md: 4,
+    } }}>
       <Image src='/splash.png' width={1720} height={800} alt="AirScrapper" className='hidden lg:block absolute top-0 left-0 w-full -z-10 select-none' />
       <Image src='/splash-tablet.png' width={750} height={1334} alt="AirScrapper" className='hidden sm:block lg:hidden absolute top-0 left-0 w-full -z-10 select-none' />
       <Image src='/splash-mobile.png' width={750} height={1334} alt="AirScrapper" className='block sm:hidden absolute top-0 left-0 w-full -z-10 select-none' />
