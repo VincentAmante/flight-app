@@ -25,7 +25,7 @@ async function getFlightsData(search: GetFlightsArgs) {
     })
     const url = `${process.env.API_URL}${API_PATH}${params.toString()}`
     try {
-        return fetch(url, {
+        const response = await fetch(url, {
             method: 'GET',
             headers: {
                 'x-rapidapi-host': process.env.API_HOST || '',
@@ -33,28 +33,27 @@ async function getFlightsData(search: GetFlightsArgs) {
             },
             credentials: 'omit'
         })
-            .then((res) => res.json())
-            .then((data) => {
-                return data.data as FlightData
-            })
-    }
-    catch {
+        if (!response.ok) {
+            console.warn(`Failed to fetch flights: ${response.statusText}`)
+            return null
+        }
+        const data = await response.json()
+        return data.data as FlightData
+    } catch (error) {
+        console.error('Error fetching flights:', error)
         throw new Error('Failed to fetch flights')
     }
 }
 
 async function getAirport(location: string): Promise<AirportData[]> {
-
     const API_PATH = '/api/v1/flights/searchAirport?'
-
 
     const params = new URLSearchParams({
         query: location,
     })
     const url = `${process.env.API_URL}${API_PATH}${params.toString()}`
-
     try {
-        return fetch(url, {
+        const response = await fetch(url, {
             method: 'GET',
             headers: {
                 'x-rapidapi-host': process.env.API_HOST || '',
@@ -62,26 +61,30 @@ async function getAirport(location: string): Promise<AirportData[]> {
             },
             credentials: 'omit'
         })
-            .then((res) => res.json())
-            .then((data) => data.data as AirportData[])
-    }
-    catch (_error) {
-        // console.error('ERROR FETCH FAILED', error)
+        if (!response.ok) {
+            console.warn(`Failed to fetch airport: ${response.statusText}`)
+            return []
+        }
+        const data = await response.json()
+        return data.data as AirportData[]
+    } catch (error) {
+        console.error('Error fetching airport:', error)
         throw new Error('Error fetching airport')
     }
 }
 
-export async function getFlights(query: QuerySchemaType) {
-    const originQuery = getAirport(query.origin)
-    const destinationQuery = getAirport(query.destination)
-
-    const [originData, destinationData] = await Promise.all([originQuery, destinationQuery])
-
-    if (!originData || !destinationData || originData.length === 0 || destinationData.length === 0)
-        throw new Error('No airports found')
+export async function getFlights(query: QuerySchemaType): Promise<FlightsData> {
     try {
-        let flights: FlightData | null = null
+        const originQuery = getAirport(query.origin)
+        const destinationQuery = getAirport(query.destination)
 
+        const [originData, destinationData] = await Promise.all([originQuery, destinationQuery])
+
+        if (!originData || !destinationData || originData.length === 0 || destinationData.length === 0) {
+            throw new Error('No airports found')
+        }
+
+        let flights: FlightData | undefined = undefined
 
         // NOTE: To save on API costs, we only fetch the first airport in each list
         for (let originAirportIndex = 0; originAirportIndex < 1; originAirportIndex++) {
@@ -97,11 +100,9 @@ export async function getFlights(query: QuerySchemaType) {
                     destinationEntityId: destinationData[destinationAirportIndex].entityId,
                     date: query.dateRange.from,
                     returnDate: query.dateRange.to || undefined,
-                }).then((data) => {
-                    if (!data) throw new Error('No flights found')
-                    return data as FlightData
                 })
 
+                if (!flightsData) continue
                 flights = flightsData
             }
         }
@@ -112,12 +113,10 @@ export async function getFlights(query: QuerySchemaType) {
             destination: destinationData,
             flights,
         }
-    }
-    catch (error) {
+    } catch (error) {
         console.error(error)
         throw new Error('Error fetching flight data')
     }
-
 }
 
 interface FlightsData {
