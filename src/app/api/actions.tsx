@@ -81,7 +81,11 @@ export async function getFlights(query: QuerySchemaType): Promise<FlightsData> {
         const [originData, destinationData] = await Promise.all([originQuery, destinationQuery])
 
         if (!originData || !destinationData || originData.length === 0 || destinationData.length === 0) {
-            throw new Error('No airports found')
+            return {
+                origin: [],
+                destination: [],
+                flights: undefined
+            }
         }
 
         let flights: FlightData | undefined = undefined
