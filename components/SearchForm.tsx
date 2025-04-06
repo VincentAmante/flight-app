@@ -7,24 +7,26 @@ import {
     Paper,
     Container,
     Autocomplete,
-} from '@mui/material'
+} from '@mui/material';
 
-import { Search as SearchIcon } from '@mui/icons-material'
+import { Search as SearchIcon } from '@mui/icons-material';
 
 import {
+    FieldError,
+    FieldErrors,
     SubmitHandler,
     useForm
-} from 'react-hook-form'
+} from 'react-hook-form';
 
-import { zodResolver } from '@hookform/resolvers/zod'
+import { zodResolver } from '@hookform/resolvers/zod';
+import { QuerySchema, QuerySchemaType } from '../utils/airscrapper-schemas';
+import { useState } from 'react';
 
-import { QuerySchema, QuerySchemaType } from '../utils/airscrapper-schemas'
-import { useState } from 'react'
 interface SearchFormProps {
     onSubmit?: (data: QuerySchemaType) => void
 }
 
-const locationOptions = ['Dubai', 'Manila', 'London', 'New York', 'Tokyo']
+const locationOptions = ['Dubai', 'Manila', 'London', 'New York', 'Tokyo'];
 
 export default function SearchForm(props: SearchFormProps) {
     const {
@@ -33,16 +35,17 @@ export default function SearchForm(props: SearchFormProps) {
         formState: { errors }
     } = useForm<QuerySchemaType>({
         resolver: zodResolver(QuerySchema)
-    })
+    });
 
     const onSubmit: SubmitHandler<QuerySchemaType> = (data) => {
-        return props.onSubmit && props.onSubmit(data)
-    }
-    const [fromDate, setFromDate] = useState(new Date().toISOString().split('T')[0])
+        return props.onSubmit && props.onSubmit(data);
+    };
+    const [fromDate, setFromDate] = useState(new Date().toISOString().split('T')[0]);
 
     return (
         <Paper elevation={2} sx={{
-            borderRadius: 2
+            borderRadius: 2,
+            padding: 2
         }}>
             <Container sx={{ py: 2 }}>
                 <form onSubmit={handleSubmit(onSubmit)}>
@@ -53,95 +56,114 @@ export default function SearchForm(props: SearchFormProps) {
                         }}
                     >
                         <Grid2 size={1}>
-                            <Autocomplete
-                                freeSolo
+                            <AutocompleteField
+                                label="Origin"
+                                name="origin"
+                                register={register}
+                                errors={errors}
                                 options={locationOptions}
-                                disableClearable
-                                renderInput={(params) => (
-                                    <TextField
-                                        {...params}
-                                        {...register('origin')}
-                                        label="Origin" variant="outlined"
-                                        error={!!errors.origin}
-                                        helperText={errors.origin?.message || ''}
-                                    />
-                                )}
                             />
                         </Grid2>
                         <Grid2 size={1}>
-                            <Autocomplete
-                                freeSolo
+                            <AutocompleteField
+                                label="Destination"
+                                name="destination"
+                                register={register}
+                                errors={errors}
                                 options={locationOptions}
-                                disableClearable
-                                renderInput={(params) => (
-                                    <TextField
-                                        {...params}
-                                        {...register('destination')}
-                                        label="Destination" variant="outlined"
-                                        error={!!errors.destination}
-                                        helperText={errors.destination?.message || ''}
-                                    />
-                                )}
                             />
                         </Grid2>
                         <Grid2 size={1}>
-                            <TextField
-                                {...register('dateRange.from')}
-                                type="date"
+                            <DateField
                                 label="Departure"
-                                slotProps={{
-                                    inputLabel: {
-                                        shrink: true,
-                                    },
-                                    htmlInput: {
-                                        // Format the date to match the ISO format
-                                        min: new Date().toISOString().split('T')[0]
-                                    }
-                                }}
-                                onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-                                    setFromDate(e.target.value);
-                                }}
-                                fullWidth
-                                error={!!errors.dateRange?.from}
-                                helperText={(errors.dateRange?.from) ? errors.dateRange.from.message : ''}
-                            >
-                            </TextField>
+                                name="dateRange.from"
+                                register={register}
+                                errors={errors}
+                                minDate={new Date().toISOString().split('T')[0]}
+                            />
                         </Grid2>
-                        <Grid2 size={1}
-                            direction='column'
-                        >
-                            <TextField
-                                {...register('dateRange.to')}
-                                type="date"
+                        <Grid2 size={1}>
+                            <DateField
                                 label="Return"
-                                slotProps={{
-                                    inputLabel: {
-                                        shrink: true,
-                                    },
-                                    htmlInput: {
-                                        // Musn't be before the from date
-                                        min: fromDate
-                                    }
-                                }}
-                                fullWidth
-                                error={!!errors.dateRange?.to}
-                                helperText={(errors.dateRange?.to) ? errors.dateRange.to.message : ''}
-                            ></TextField>
+                                name="dateRange.to"
+                                register={register}
+                                errors={errors}
+                                minDate={fromDate}
+                            />
                         </Grid2>
                     </Grid2>
                     <Grid2 size={4} sx={{ pt: 1 }} display='flex' justifyContent='center'>
                         <Button
-                            onClick={handleSubmit(onSubmit)}
+                            type="submit"
+                            variant="contained"
+                            color="primary"
+                            startIcon={<SearchIcon />}
                             sx={{
                                 borderRadius: 12,
-                                fontWeight: 'light'
+                                fontWeight: 'light',
+                                paddingY: 1.5,
+                                paddingX: 3
                             }}
-                            startIcon={<SearchIcon />} size='large' variant='contained' color='primary'>
+                        >
                             Search
                         </Button>
                     </Grid2>
                 </form>
             </Container>
         </Paper>
-    )
+    );
 }
+
+interface AutocompleteFieldProps {
+    label: string;
+    name: string;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    register: any;
+    errors: FieldErrors;
+    options: string[];
+}
+
+const AutocompleteField = ({ label, name, register, errors, options }: AutocompleteFieldProps) => (
+    <Autocomplete
+        freeSolo
+        disableClearable
+        options={options}
+        renderInput={(params) => (
+            <TextField
+                {...params}
+                {...register(name)}
+                label={label} variant="outlined"
+                error={!!errors[name]}
+                helperText={errors[name]?.message || ''}
+            />
+        )}
+    />
+);
+
+interface DateFieldProps {
+    label: string;
+    name: string;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    register: any;
+    errors: FieldErrors;
+    minDate?: string;
+}
+
+const DateField = ({ label, name, register, errors, minDate }: DateFieldProps) => (
+    <TextField
+        {...register(name)}
+        type="date"
+        label={label}
+        slotProps={{
+            inputLabel: {
+                shrink: true,
+            },
+            htmlInput: {
+                min: minDate || new Date().toISOString().split('T')[0]
+            }
+        }}
+        fullWidth
+        error={!!errors[name]}
+        helperText={(errors[name]) ? errors[name].message : ''}
+    />
+);
