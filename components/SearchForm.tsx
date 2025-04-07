@@ -20,7 +20,7 @@ import {
 
 import { zodResolver } from '@hookform/resolvers/zod';
 import { QuerySchema, QuerySchemaType } from '../utils/airscrapper-schemas';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 interface SearchFormProps {
     onSubmit?: (data: QuerySchemaType) => void
@@ -40,8 +40,9 @@ export default function SearchForm(props: SearchFormProps) {
     const onSubmit: SubmitHandler<QuerySchemaType> = (data) => {
         return props.onSubmit && props.onSubmit(data);
     };
-    const [fromDate, setFromDate] = useState(new Date().toISOString().split('T')[0]);
 
+    const [fromDate, setFromDate] = useState(new Date().toISOString().split('T')[0]);
+    const [minDate,] = useState(new Date().toISOString().split('T')[0]);
     return (
         <Paper elevation={2} sx={{
             borderRadius: 2,
@@ -79,7 +80,10 @@ export default function SearchForm(props: SearchFormProps) {
                                 name="dateRange.from"
                                 register={register}
                                 errors={errors}
-                                minDate={new Date().toISOString().split('T')[0]}
+                                minDate={minDate}
+                                onChange={(date) => {
+                                    setFromDate(date)
+                                }}
                             />
                         </Grid2>
                         <Grid2 size={1}>
@@ -147,9 +151,10 @@ interface DateFieldProps {
     register: any;
     errors: FieldErrors;
     minDate?: string;
+    onChange?: (date: string) => void;
 }
 
-const DateField = ({ label, name, register, errors, minDate }: DateFieldProps) => (
+const DateField = ({ label, name, register, errors, minDate, onChange }: DateFieldProps) => (
     <TextField
         {...register(name)}
         type="date"
@@ -165,5 +170,6 @@ const DateField = ({ label, name, register, errors, minDate }: DateFieldProps) =
         fullWidth
         error={!!errors[name]}
         helperText={(errors[name]) ? errors[name].message : ''}
+        onChange={(e) => onChange && onChange(e.target.value)}
     />
 );
