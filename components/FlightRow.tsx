@@ -25,6 +25,7 @@ import {
     Slider,
     Skeleton,
     Avatar,
+    Grid2,
 } from "@mui/material";
 
 import {
@@ -271,41 +272,44 @@ function FlightRow(props: RowProps) {
             <TableCell sx={{ p: 0 }} colSpan={2}>
                 <Collapse in={open} timeout="auto" unmountOnExit>
                     <Stack sx={{ py: 1 }}>
+                        <Grid2 container spacing={2}>
+                            <Grid2 size={6}>
+                                <Typography>Departure</Typography>
+                                {departingFlight.segments!.map((segment, index) => (
+                                    <Fragment key={segment.id}>
+                                        <SegmentTimeline segment={segment} />
+                                        {index === departingFlight.segments!.length - 1 ? null
+                                            :
+                                            <>
+                                                <Divider textAlign="left">
+                                                    <MinutesToHoursAndMins minutes={layovers[index]} />
+                                                    &nbsp;Layover
+                                                </Divider>
+                                            </>
+                                        }
+                                    </Fragment>
+                                ))}
+                            </Grid2>
+                            <Grid2 size={6}>
 
-                        {itinerary.legs.length > 1 && (
-                            <Typography onClick={() => setShowReturnFlight(!showReturnFlight)}>
-                                {showReturnFlight ? 'Hide Return Flight' : 'Show Return Flight'}
-                            </Typography>
-                        )}
-                        {!showReturnFlight && departingFlight.segments!.map((segment, index) => (
-                            <Fragment key={segment.id}>
-                                <SegmentTimeline segment={segment} />
-                                {index === departingFlight.segments!.length - 1 ? null
-                                    :
-                                    <>
-                                        <Divider textAlign="left">
-                                            <MinutesToHoursAndMins minutes={layovers[index]} />
-                                            &nbsp;Layover
-                                        </Divider>
-                                    </>
-                                }
-                            </Fragment>
-                        ))}
+                                <Typography>Return</Typography>
+                                {itinerary.legs.length > 1 && itinerary.legs[1].segments!.map((segment, index) => (
+                                    <Fragment key={segment.id}>
+                                        <SegmentTimeline segment={segment} />
+                                        {itinerary.legs && index === itinerary.legs[1].segments!.length - 1 ? null
+                                            :
+                                            <>
+                                                <Divider textAlign="left">
+                                                    <MinutesToHoursAndMins minutes={layovers[index]} />
+                                                    &nbsp;Layover
+                                                </Divider>
+                                            </>
+                                        }
+                                    </Fragment>
+                                ))}
+                            </Grid2>
 
-                        {itinerary.legs.length > 1 && showReturnFlight && itinerary.legs[1].segments!.map((segment, index) => (
-                            <Fragment key={segment.id}>
-                                <SegmentTimeline segment={segment} />
-                                {index === itinerary.legs[1].segments!.length - 1 ? null
-                                    :
-                                    <>
-                                        <Divider textAlign="left">
-                                            <MinutesToHoursAndMins minutes={layovers[index]} />
-                                            &nbsp;Layover
-                                        </Divider>
-                                    </>
-                                }
-                            </Fragment>
-                        ))}
+                        </Grid2>
                     </Stack>
                 </Collapse>
             </TableCell>
