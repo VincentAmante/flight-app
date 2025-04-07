@@ -20,10 +20,9 @@ import {
 
 import { zodResolver } from '@hookform/resolvers/zod';
 import { QuerySchema, QuerySchemaType } from '../utils/airscrapper-schemas';
-import { useState, useEffect } from 'react';
 
 interface SearchFormProps {
-    onSubmit?: (data: QuerySchemaType) => void
+    onSubmit?: (data: QuerySchemaType) => void;
 }
 
 const locationOptions = ['Dubai', 'Manila', 'London', 'New York', 'Tokyo'];
@@ -38,24 +37,14 @@ export default function SearchForm(props: SearchFormProps) {
     });
 
     const onSubmit: SubmitHandler<QuerySchemaType> = (data) => {
-        return props.onSubmit && props.onSubmit(data);
+        props.onSubmit?.(data);
     };
 
-    const [fromDate, setFromDate] = useState(new Date().toISOString().split('T')[0]);
-    const [minDate,] = useState(new Date().toISOString().split('T')[0]);
     return (
-        <Paper elevation={2} sx={{
-            borderRadius: 2,
-            padding: 2
-        }}>
+        <Paper elevation={2} sx={{ borderRadius: 2, padding: 2 }}>
             <Container sx={{ py: 2 }}>
                 <form onSubmit={handleSubmit(onSubmit)}>
-                    <Grid2 container rowSpacing={2} columnSpacing={1}
-                        columns={{
-                            xs: 2,
-                            md: 4
-                        }}
-                    >
+                    <Grid2 container rowSpacing={2} columnSpacing={1} columns={{ xs: 2, md: 4 }}>
                         <Grid2 size={1}>
                             <AutocompleteField
                                 label="Origin"
@@ -80,10 +69,7 @@ export default function SearchForm(props: SearchFormProps) {
                                 name="dateRange.from"
                                 register={register}
                                 errors={errors}
-                                minDate={minDate}
-                                onChange={(date) => {
-                                    setFromDate(date)
-                                }}
+                                minDate={new Date().toISOString().split('T')[0]}
                             />
                         </Grid2>
                         <Grid2 size={1}>
@@ -92,7 +78,7 @@ export default function SearchForm(props: SearchFormProps) {
                                 name="dateRange.to"
                                 register={register}
                                 errors={errors}
-                                minDate={fromDate}
+                                minDate={new Date().toISOString().split('T')[0]}
                             />
                         </Grid2>
                     </Grid2>
@@ -121,7 +107,6 @@ export default function SearchForm(props: SearchFormProps) {
 interface AutocompleteFieldProps {
     label: string;
     name: string;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     register: any;
     errors: FieldErrors;
     options: string[];
@@ -136,7 +121,8 @@ const AutocompleteField = ({ label, name, register, errors, options }: Autocompl
             <TextField
                 {...params}
                 {...register(name)}
-                label={label} variant="outlined"
+                label={label}
+                variant="outlined"
                 error={!!errors[name]}
                 helperText={errors[name]?.message || ''}
             />
@@ -147,14 +133,12 @@ const AutocompleteField = ({ label, name, register, errors, options }: Autocompl
 interface DateFieldProps {
     label: string;
     name: string;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     register: any;
     errors: FieldErrors;
     minDate?: string;
-    onChange?: (date: string) => void;
 }
 
-const DateField = ({ label, name, register, errors, minDate, onChange }: DateFieldProps) => (
+const DateField = ({ label, name, register, errors, minDate }: DateFieldProps) => (
     <TextField
         {...register(name)}
         type="date"
@@ -170,6 +154,5 @@ const DateField = ({ label, name, register, errors, minDate, onChange }: DateFie
         fullWidth
         error={!!errors[name]}
         helperText={(errors[name]) ? errors[name].message : ''}
-        onChange={(e) => onChange && onChange(e.target.value)}
     />
 );
