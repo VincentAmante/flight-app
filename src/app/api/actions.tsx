@@ -9,20 +9,41 @@ interface GetFlightsArgs {
     destinationSkyId: string
     destinationEntityId: string
     date: string
-    returnDate?: string
+    returnDate: string
+    cabinClass?: string
+    adults?: string
+    childrens?: string
+    infants?: string
+    sortBy?: string
+    limit?: string
+    carriersIds?: string
+    currency?: string
 }
 
 async function getFlightsData(search: GetFlightsArgs) {
     const API_PATH = '/api/v2/flights/searchFlights?'
 
-    const params = new URLSearchParams({
+    const searchFiltered = {
         originSkyId: search.originSkyId,
         originEntityId: search.originEntityId,
         destinationSkyId: search.destinationSkyId,
         destinationEntityId: search.destinationEntityId,
         date: search.date,
-        returnDate: search.returnDate || ''
-    })
+        returnDate: search.returnDate,
+        adults: search.adults,
+        childrens: search.childrens,
+        infants: search.infants,
+        carriersIds: search.carriersIds,
+        // currency: search.currency || 'USD',
+        limit: search.limit || '10',
+    } satisfies GetFlightsArgs
+
+    const searchParsed = Object.fromEntries(
+        Object.entries(searchFiltered).filter(
+            ([_, value]) => value !== '' && value !== '0'
+        )
+    )
+    const params = new URLSearchParams({ ...searchParsed as unknown as GetFlightsArgs})
     const url = `${process.env.API_URL}${API_PATH}${params.toString()}`
     try {
         const response = await fetch(url, {
@@ -98,6 +119,7 @@ export async function getFlights(query: QuerySchemaType): Promise<FlightsData> {
                 if (!destinationData[destinationAirportIndex]) continue
 
                 const flightsData = await getFlightsData({
+                    ...query,
                     originSkyId: originData[originAirportIndex].skyId,
                     originEntityId: originData[originAirportIndex].entityId,
                     destinationSkyId: destinationData[destinationAirportIndex].skyId,
@@ -110,6 +132,7 @@ export async function getFlights(query: QuerySchemaType): Promise<FlightsData> {
                 flights = flightsData
             }
         }
+
 
         // Return the data to the client
         return {
