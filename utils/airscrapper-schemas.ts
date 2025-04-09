@@ -31,7 +31,6 @@ export const QuerySchema = z
             to: z
                 .string()
                 .date()
-                .optional()
         }),
         cabinClass: z.enum(['economy', 'premium_economy', 'business', 'first']).default('economy'),
         adults: z.string().optional(),

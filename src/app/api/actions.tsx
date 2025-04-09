@@ -98,7 +98,6 @@ export async function getFlights(query: QuerySchemaType): Promise<FlightsData> {
     try {
         const originQuery = getAirport(query.origin)
         const destinationQuery = getAirport(query.destination)
-
         const [originData, destinationData] = await Promise.all([originQuery, destinationQuery])
 
         if (!originData || !destinationData || originData.length === 0 || destinationData.length === 0) {
@@ -125,7 +124,7 @@ export async function getFlights(query: QuerySchemaType): Promise<FlightsData> {
                     destinationSkyId: destinationData[destinationAirportIndex].skyId,
                     destinationEntityId: destinationData[destinationAirportIndex].entityId,
                     date: query.dateRange.from,
-                    returnDate: query.dateRange.to || undefined,
+                    returnDate: query.dateRange.to,
                 })
 
                 if (!flightsData) continue
