@@ -25,7 +25,7 @@ import {
     Slider,
     Skeleton,
     Avatar,
-    Grid2,
+    Grid,
 } from "@mui/material";
 
 import {
@@ -272,8 +272,8 @@ function FlightRow(props: RowProps) {
             <TableCell sx={{ p: 0 }} colSpan={2}>
                 <Collapse in={open} timeout="auto" unmountOnExit>
                     <Stack sx={{ py: 1 }}>
-                        <Grid2 container spacing={2}>
-                            <Grid2 size={6}>
+                        <Grid container spacing={2}>
+                            <Grid size={6}>
                                 <Typography>Departure</Typography>
                                 {departingFlight.segments!.map((segment, index) => (
                                     <Fragment key={segment.id}>
@@ -289,8 +289,8 @@ function FlightRow(props: RowProps) {
                                         }
                                     </Fragment>
                                 ))}
-                            </Grid2>
-                            <Grid2 size={6}>
+                            </Grid>
+                            <Grid size={6}>
 
                                 <Typography>Return</Typography>
                                 {itinerary.legs.length > 1 && itinerary.legs[1].segments!.map((segment, index) => (
@@ -307,9 +307,9 @@ function FlightRow(props: RowProps) {
                                         }
                                     </Fragment>
                                 ))}
-                            </Grid2>
+                            </Grid>
 
-                        </Grid2>
+                        </Grid>
                     </Stack>
                 </Collapse>
             </TableCell>
