@@ -3,7 +3,7 @@
 import {
     TextField,
     Button,
-    Grid2,
+    Grid2 as Grid,
     Paper,
     Container,
     Autocomplete,
@@ -49,9 +49,9 @@ export default function SearchForm(props: SearchFormProps) {
             <Container sx={{ py: 2 }}>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <Stack>
-                        <Grid2 size={2} sx={{ padding: 1 }}>
-                            <Grid2 container rowSpacing={2} columnSpacing={1} columns={{ xs: 2, md: 4 }}>
-                                <Grid2 size={1}>
+                        <Grid size={2} sx={{ padding: 1 }}>
+                            <Grid container rowSpacing={2} columnSpacing={1} columns={{ xs: 2, md: 4 }}>
+                                <Grid size={1}>
                                     <AutocompleteField
                                         label="Origin"
                                         name="origin"
@@ -60,8 +60,8 @@ export default function SearchForm(props: SearchFormProps) {
                                         options={locationOptions}
                                         required
                                     />
-                                </Grid2>
-                                <Grid2 size={1}>
+                                </Grid>
+                                <Grid size={1}>
                                     <AutocompleteField
                                         label="Destination"
                                         name="destination"
@@ -70,8 +70,8 @@ export default function SearchForm(props: SearchFormProps) {
                                         options={locationOptions}
                                         required
                                     />
-                                </Grid2>
-                                <Grid2 size={1}>
+                                </Grid>
+                                <Grid size={1}>
                                     <DateField
                                         label="Departure"
                                         name="dateRange.from"
@@ -80,8 +80,8 @@ export default function SearchForm(props: SearchFormProps) {
                                         minDate={new Date().toISOString().split('T')[0]}
                                         required
                                     />
-                                </Grid2>
-                                <Grid2 size={1}>
+                                </Grid>
+                                <Grid size={1}>
                                     <DateField
                                         label="Return"
                                         name="dateRange.to"
@@ -90,9 +90,9 @@ export default function SearchForm(props: SearchFormProps) {
                                         minDate={new Date().toISOString().split('T')[0]}
                                         required
                                     />
-                                </Grid2>
-                            </Grid2>
-                        </Grid2>
+                                </Grid>
+                            </Grid>
+                        </Grid>
                         {/* <Grid2 size={4} sx={{ pt: 1 }} display='flex' justifyContent='center'>
                             <Button
                                 type="submit"
@@ -109,9 +109,9 @@ export default function SearchForm(props: SearchFormProps) {
                                 Search
                             </Button>
                         </Grid2> */}
-                        <Grid2 size={2} sx={{ padding: 1 }}>
-                            <Grid2 container rowSpacing={2} columnSpacing={1} columns={{ xs: 8, md: 8 }}>
-                                <Grid2 size={1}>
+                        <Grid size={2} sx={{ padding: 1 }}>
+                            <Grid container rowSpacing={2} columnSpacing={1} columns={{ xs: 8, md: 8 }}>
+                                <Grid size={1}>
                                     <TextField
                                         label="Cabin Class"
                                         select
@@ -131,8 +131,8 @@ export default function SearchForm(props: SearchFormProps) {
                                         <MenuItem value="business">Business</MenuItem>
                                         <MenuItem value="first">First</MenuItem>
                                     </TextField>
-                                </Grid2>
-                                <Grid2 size={1}>
+                                </Grid>
+                                <Grid size={1}>
                                     <TextField
                                         label="Adults"
                                         type="number"
@@ -146,8 +146,8 @@ export default function SearchForm(props: SearchFormProps) {
                                         }}
                                         size="small"
                                     />
-                                </Grid2>
-                                <Grid2 size={1}>
+                                </Grid>
+                                <Grid size={1}>
                                     <TextField
                                         label="Children"
                                         type="number"
@@ -161,8 +161,8 @@ export default function SearchForm(props: SearchFormProps) {
                                         }}
                                         size="small"
                                     />
-                                </Grid2>
-                                <Grid2 size={1}>
+                                </Grid>
+                                <Grid size={1}>
                                     <TextField
                                         label="Infants"
                                         type="number"
@@ -176,7 +176,7 @@ export default function SearchForm(props: SearchFormProps) {
                                         }}
                                         size="small"
                                     />
-                                </Grid2>
+                                </Grid>
                                 {/* <Grid2 size={1}>
                                     <TextField
                                         label="Sort By"
@@ -247,10 +247,10 @@ export default function SearchForm(props: SearchFormProps) {
                                         size="small"
                                     />
                                 </Grid2> */}
-                            </Grid2>
-                        </Grid2>
+                            </Grid>
+                        </Grid>
                     </Stack>
-                    <Grid2 size={4} sx={{ pt: 1 }} display='flex' justifyContent='center'>
+                    <Grid size={4} sx={{ pt: 1 }} display='flex' justifyContent='center'>
                         <Button
                             type="submit"
                             variant="contained"
@@ -265,7 +265,7 @@ export default function SearchForm(props: SearchFormProps) {
                         >
                             Search
                         </Button>
-                    </Grid2>
+                    </Grid>
                 </form>
             </Container>
         </Paper>
